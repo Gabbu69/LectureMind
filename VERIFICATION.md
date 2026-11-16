@@ -52,3 +52,5 @@ OpenAI source links refer to the start of each five-minute audio section. A Sett
 ## Reproduce
 
 Follow [the build guide](docs/BUILD.md) for JDK 17, Gradle 9.3.1, SDK 36 and signing setup. Use separate compiler, test, lint and APK assembly processes on low-memory machines. Run `python tools/verify_release.py` to inspect the APK and `python tools/audit_dependencies.py` for the locked Maven advisory scan. No native package-manager advisory audit is available for this Gradle project; OSV is used for resolved locked coordinates.
+
+Publication follow-up: a second, lower-memory unit-test retry reached Kotlin compilation but reported JVM metaspace exhaustion and made no further useful progress. Its identified Gradle client/daemon were stopped; it is not a passing run. See [retry output](verification/publication-test-retry.log). The public APK was downloaded without authentication after publication: 11,090,711 bytes, with SHA-256 exactly matching the value above. The public README and all four presentation assets were also reachable.
