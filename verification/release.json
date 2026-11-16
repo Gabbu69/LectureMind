@@ -1,0 +1,15 @@
+{
+  "verified_at": "2026-11-16T08:32:14.179159+00:00",
+  "apk": "G:\\LectureMind-build\\releases\\LectureMind-1.0.0.apk",
+  "size_bytes": 11090711,
+  "sha256": "07c31e6a7e7a024ef5dc9a432185f39b4a465afa87a4e5867199d5aa9f512073",
+  "package": "com.lecturemind.app",
+  "version": "1.0.0",
+  "minimum_sdk": 26,
+  "target_sdk": 36,
+  "debuggable": false,
+  "signature_verified": true,
+  "zip_integrity": true,
+  "embedded_provider_key_pattern_check": "passed",
+  "device_acceptance": "See VERIFICATION.md and verification/device-short.log; APK inspection alone does not establish device acceptance"
+}

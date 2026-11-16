@@ -1,0 +1,4 @@
+* text=auto
+*.png binary
+# Keep captured command output verbatim, including Gradle's trailing spaces.
+verification/*.log -whitespace

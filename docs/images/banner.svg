@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="420" viewBox="0 0 1280 420" role="img" aria-label="LectureMind — Listen now. Understand more.">
+<rect width="1280" height="420" rx="28" fill="#0d1b17"/>
+<circle cx="1140" cy="70" r="230" fill="#142e26"/>
+<circle cx="1140" cy="70" r="164" fill="none" stroke="#284b3f" stroke-width="2"/>
+<rect x="64" y="56" width="70" height="70" rx="22" fill="#70d8bd"/>
+<g stroke="#073e33" stroke-width="5"><path d="M84 85v14M94 76v32M104 69v46M114 81v22"/></g>
+<g font-family="Segoe UI,Arial,sans-serif"><text x="154" y="103" fill="#e4eee8" font-size="36" font-weight="700">LectureMind</text>
+<text x="64" y="206" fill="#f0f5f1" font-size="57" font-weight="700">Listen now. Understand more.</text>
+<text x="66" y="260" fill="#b4cbc0" font-size="26">Record your lectures. Revisit the details. Study at your pace.</text>
+<rect x="64" y="312" width="210" height="47" rx="23" fill="#70d8bd"/><text x="93" y="343" fill="#073e33" font-size="20" font-weight="600">Android 8.0+</text>
+<text x="304" y="343" fill="#b4cbc0" font-size="20">Offline recording · Optional AI · Your own API key</text></g>
+</svg>

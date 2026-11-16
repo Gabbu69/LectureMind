@@ -1,0 +1,48 @@
+{
+  "OldDProjectFilesRemaining": 0,
+  "VerifiedBytes": 3058607915,
+  "CProjectCopyFound": false,
+  "OldEProjectExists": false,
+  "CompletedAt": "2026-11-16T16:02:06.4471121+08:00",
+  "BeforeFinalCleanup": [
+    {
+      "Name": "C",
+      "Free": 249020416
+    },
+    {
+      "Name": "D",
+      "Free": 2671669248
+    },
+    {
+      "Name": "E",
+      "Free": 132260954112
+    },
+    {
+      "Name": "G",
+      "Free": 367546974208
+    }
+  ],
+  "WorkspacePointer": "location note",
+  "ToolchainOnG": "G:\\LectureMind-build",
+  "SourceOnG": "G:\\LectureMind",
+  "VerifiedFiles": 20815,
+  "CProjectFilesDeleted": 0,
+  "After": [
+    {
+      "Name": "C",
+      "Free": 247042048
+    },
+    {
+      "Name": "D",
+      "Free": 2671669248
+    },
+    {
+      "Name": "E",
+      "Free": 134005260288
+    },
+    {
+      "Name": "G",
+      "Free": 367546974208
+    }
+  ]
+}

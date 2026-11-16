@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.lecturemind.app.CoreTests" tests="12" skipped="0" failures="0" errors="0" timestamp="2026-11-16T07:02:03.894Z" hostname="GABBU" time="78.016">
+  <properties/>
+  <testcase name="rejectsInventedReferences" classname="com.lecturemind.app.CoreTests" time="0.111"/>
+  <testcase name="rejectsRepeatedQuestions" classname="com.lecturemind.app.CoreTests" time="0.003"/>
+  <testcase name="validatesStudyAndRoundTripsQuestions" classname="com.lecturemind.app.CoreTests" time="0.005"/>
+  <testcase name="rejectsMissingReferences" classname="com.lecturemind.app.CoreTests" time="0.001"/>
+  <testcase name="rejectsInvalidAnswer" classname="com.lecturemind.app.CoreTests" time="0.002"/>
+  <testcase name="twoHourFixtureStreamsAndResumesWithoutRepeatingCompletedSections" classname="com.lecturemind.app.CoreTests" time="77.814"/>
+  <testcase name="acceptsExplicitInsufficientContent" classname="com.lecturemind.app.CoreTests" time="0.006"/>
+  <testcase name="malformedOutputProducesActionableError" classname="com.lecturemind.app.CoreTests" time="0.001"/>
+  <testcase name="seeksAcrossBoundariesAndClampsAtEnd" classname="com.lecturemind.app.CoreTests" time="0.035"/>
+  <testcase name="wavHeaderHasCorrectRateAndLength" classname="com.lecturemind.app.CoreTests" time="0.001"/>
+  <testcase name="transcriptPreservesLanguageAndTimestamps" classname="com.lecturemind.app.CoreTests" time="0.001"/>
+  <testcase name="crashRecoveryRepairsPartialSampleAndDuration" classname="com.lecturemind.app.CoreTests" time="0.014"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

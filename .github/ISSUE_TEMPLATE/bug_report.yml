@@ -1,0 +1,28 @@
+name: Report a bug
+description: Help improve LectureMind without sharing private lecture content.
+title: "[Bug] "
+body:
+  - type: markdown
+    attributes:
+      value: "Do not post API keys, private recordings or personal lecture content."
+  - type: input
+    id: device
+    attributes:
+      label: Phone and Android version
+      placeholder: "TECNO SPARK 30 Pro, Android 14"
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: LectureMind version
+      placeholder: "1.0.0"
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Include what you expected and what actually happened.
+    validations:
+      required: true

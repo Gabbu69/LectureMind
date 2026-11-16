@@ -1,0 +1,146 @@
+[
+  {
+    "name": "AutoAwesome",
+    "source": "commonMain/androidx/compose/material/icons/outlined/AutoAwesome.kt",
+    "source_sha256": "1d5682bde420f4cbdaff4b07789b58a896154ebd8223f848bff082142605091f",
+    "file": "app/src/main/java/com/lecturemind/app/ui/icons/AutoAwesome.kt"
+  },
+  {
+    "name": "AutoStories",
+    "source": "commonMain/androidx/compose/material/icons/outlined/AutoStories.kt",
+    "source_sha256": "ef54d32a6d42335180da9a06facd23294eca7ea59fe11cd0fef22c4166bd515f",
+    "file": "app/src/main/java/com/lecturemind/app/ui/icons/AutoStories.kt"
+  },
+  {
+    "name": "BookmarkAdd",
+    "source": "commonMain/androidx/compose/material/icons/outlined/BookmarkAdd.kt",
+    "source_sha256": "998d9fde7cadddcbdf91c89afbdcfb0dc138ca6dfa87ca7961a77fe521945ad1",
+    "file": "app/src/main/java/com/lecturemind/app/ui/icons/BookmarkAdd.kt"
+  },
+  {
+    "name": "BookmarkBorder",
+    "source": "commonMain/androidx/compose/material/icons/outlined/BookmarkBorder.kt",
+    "source_sha256": "43e9e1b32986df021ecd49cc981d0627e2d6ee01b9f26bce6f171fc50f5a2c6d",
+    "file": "app/src/main/java/com/lecturemind/app/ui/icons/BookmarkBorder.kt"
+  },
+  {
+    "name": "ChevronRight",
+    "source": "commonMain/androidx/compose/material/icons/outlined/ChevronRight.kt",
+    "source_sha256": "ee9deef748bcc4a04b723c528648d14b85b6a9ce850ca03729f14a0121de1da3",
+    "file": "app/src/main/java/com/lecturemind/app/ui/icons/ChevronRight.kt"
+  },
+  {
+    "name": "DeleteOutline",
+    "source": "commonMain/androidx/compose/material/icons/outlined/DeleteOutline.kt",
+    "source_sha256": "6031ce2aaa1a0b0cd1a120d2d3a167ededd40d0ec316f2f22412f438e4fb0c82",
+    "file": "app/src/main/java/com/lecturemind/app/ui/icons/DeleteOutline.kt"
+  },
+  {
+    "name": "Description",
+    "source": "commonMain/androidx/compose/material/icons/outlined/Description.kt",
+    "source_sha256": "1ef2e175e3b415c0bf29edf0e03fb8783bf0826a76e55e0acf709f67f6a1e7b0",
+    "file": "app/src/main/java/com/lecturemind/app/ui/icons/Description.kt"
+  },
+  {
+    "name": "Forward10",
+    "source": "commonMain/androidx/compose/material/icons/outlined/Forward10.kt",
+    "source_sha256": "b227b4142054e6387044329c51328c3976c0f8caf248f5d43ff91d6d09a98757",
+    "file": "app/src/main/java/com/lecturemind/app/ui/icons/Forward10.kt"
+  },
+  {
+    "name": "GraphicEq",
+    "source": "commonMain/androidx/compose/material/icons/outlined/GraphicEq.kt",
+    "source_sha256": "9fd48e3ad02ed97f7facd756b88e40af884a5588fe14a2e88f8ce6469c09955a",
+    "file": "app/src/main/java/com/lecturemind/app/ui/icons/GraphicEq.kt"
+  },
+  {
+    "name": "Headphones",
+    "source": "commonMain/androidx/compose/material/icons/outlined/Headphones.kt",
+    "source_sha256": "8d99bf8795829c97330db4970b19d812d8a0dc48e1acf2000260e7dad6dc9c61",
+    "file": "app/src/main/java/com/lecturemind/app/ui/icons/Headphones.kt"
+  },
+  {
+    "name": "IosShare",
+    "source": "commonMain/androidx/compose/material/icons/outlined/IosShare.kt",
+    "source_sha256": "1221213659213dcbd71426414fcdc4735794f2dd6b3e9b237153abcab465672e",
+    "file": "app/src/main/java/com/lecturemind/app/ui/icons/IosShare.kt"
+  },
+  {
+    "name": "KeyOff",
+    "source": "commonMain/androidx/compose/material/icons/outlined/KeyOff.kt",
+    "source_sha256": "fdc6a65102c6201164f722f19c0b05952fc1c1f07706a3a7adaa9eb29b54d58b",
+    "file": "app/src/main/java/com/lecturemind/app/ui/icons/KeyOff.kt"
+  },
+  {
+    "name": "Mic",
+    "source": "commonMain/androidx/compose/material/icons/outlined/Mic.kt",
+    "source_sha256": "83091ad4e5aabfd9d19d9026aef80794a21d6088e246e53feaae995d27098ef7",
+    "file": "app/src/main/java/com/lecturemind/app/ui/icons/Mic.kt"
+  },
+  {
+    "name": "Pause",
+    "source": "commonMain/androidx/compose/material/icons/outlined/Pause.kt",
+    "source_sha256": "5db2ae5735a487338b57ecb4c498388ec83b219c43f3dfa0819e51b87d691782",
+    "file": "app/src/main/java/com/lecturemind/app/ui/icons/Pause.kt"
+  },
+  {
+    "name": "PhonelinkLock",
+    "source": "commonMain/androidx/compose/material/icons/outlined/PhonelinkLock.kt",
+    "source_sha256": "5aed97eeaaf2848658242824f89268962b22f4626b68880f96a7e54ff22c6b56",
+    "file": "app/src/main/java/com/lecturemind/app/ui/icons/PhonelinkLock.kt"
+  },
+  {
+    "name": "PlayCircle",
+    "source": "commonMain/androidx/compose/material/icons/outlined/PlayCircle.kt",
+    "source_sha256": "76fcf5989957474efe1f2bb1bf9ce10def66a65ee81e930345fe3451bd0997d1",
+    "file": "app/src/main/java/com/lecturemind/app/ui/icons/PlayCircle.kt"
+  },
+  {
+    "name": "Quiz",
+    "source": "commonMain/androidx/compose/material/icons/outlined/Quiz.kt",
+    "source_sha256": "de464d48944549686064819b303705943c99684e3daebb59514ad2614fd0d3ec",
+    "file": "app/src/main/java/com/lecturemind/app/ui/icons/Quiz.kt"
+  },
+  {
+    "name": "Replay10",
+    "source": "commonMain/androidx/compose/material/icons/outlined/Replay10.kt",
+    "source_sha256": "ade360c125018d7915acf2c1839f94dc0b99465f09d6a150951d576d9dd27c94",
+    "file": "app/src/main/java/com/lecturemind/app/ui/icons/Replay10.kt"
+  },
+  {
+    "name": "School",
+    "source": "commonMain/androidx/compose/material/icons/outlined/School.kt",
+    "source_sha256": "63db8ea8c3c43cd858cac901a6dc61c61c029b3b819775abe70f133df409e1e4",
+    "file": "app/src/main/java/com/lecturemind/app/ui/icons/School.kt"
+  },
+  {
+    "name": "Stop",
+    "source": "commonMain/androidx/compose/material/icons/outlined/Stop.kt",
+    "source_sha256": "01efea2b09a6feef0e8911b0cd37db24529354f7cb7b88c99d59ed8ec019e28d",
+    "file": "app/src/main/java/com/lecturemind/app/ui/icons/Stop.kt"
+  },
+  {
+    "name": "Subtitles",
+    "source": "commonMain/androidx/compose/material/icons/outlined/Subtitles.kt",
+    "source_sha256": "4084552c274b273602f753afd78393bf75169aac09ce5d0f0fae4dcc18ac2d93",
+    "file": "app/src/main/java/com/lecturemind/app/ui/icons/Subtitles.kt"
+  },
+  {
+    "name": "Tune",
+    "source": "commonMain/androidx/compose/material/icons/outlined/Tune.kt",
+    "source_sha256": "e9d2c8c63428cf7c05b0ab500753d3b216c3d5891b648b9170f479640f431a16",
+    "file": "app/src/main/java/com/lecturemind/app/ui/icons/Tune.kt"
+  },
+  {
+    "name": "VerifiedUser",
+    "source": "commonMain/androidx/compose/material/icons/outlined/VerifiedUser.kt",
+    "source_sha256": "e3016a205fa389efbd40ffa06d5b37fd93f0ff60f32eeab0025ffe8569664801",
+    "file": "app/src/main/java/com/lecturemind/app/ui/icons/VerifiedUser.kt"
+  },
+  {
+    "name": "AutoMirrored.LibraryBooks",
+    "source": "commonMain/androidx/compose/material/icons/automirrored/outlined/LibraryBooks.kt",
+    "source_sha256": "51df45d682a977ecf7b8681f9f6bdba66a77df28288479ad86c69276f5663a3c",
+    "file": "app/src/main/java/com/lecturemind/app/ui/icons/AutoLibraryBooks.kt"
+  }
+]

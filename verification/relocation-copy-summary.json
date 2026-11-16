@@ -1,0 +1,19 @@
+{
+  "VerifiedAt": "2026-11-16T15:43:01.6544709+08:00",
+  "Transfers": [
+    {
+      "Source": "D:\\LectureMind",
+      "Destination": "G:\\LectureMind",
+      "Files": 17375,
+      "Bytes": 1292131322.0,
+      "Verified": true
+    },
+    {
+      "Source": "E:\\LectureMind-build",
+      "Destination": "G:\\LectureMind-build",
+      "Files": 3440,
+      "Bytes": 1766476593.0,
+      "Verified": true
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+Verifies
+Verified using v1 scheme (JAR signing): false
+Verified using v2 scheme (APK Signature Scheme v2): true
+Verified using v3 scheme (APK Signature Scheme v3): false
+Verified using v3.1 scheme (APK Signature Scheme v3.1): false
+Verified using v4 scheme (APK Signature Scheme v4): false
+Verified for SourceStamp: false
+Number of signers: 1
+Signer #1 certificate DN: CN=LectureMind Personal, O=LectureMind, C=PH
+Signer #1 certificate SHA-256 digest: f16d887c0da755dbaeede90f88255d9dc747bc995c82368719cf648057596c33
+Signer #1 certificate SHA-1 digest: 4c545227860dec5182972e8af7e48ae538a4aabc
+Signer #1 certificate MD5 digest: a590bcd83cacae2ce6a2c2da47e326d7
+Signer #1 key algorithm: RSA
+Signer #1 key size (bits): 3072
+Signer #1 public key SHA-256 digest: c7781bababbfc8f96bbefb47f95c121245aac2dee5855e51d63f074e5b76f3b7
+Signer #1 public key SHA-1 digest: 31c6bb951de6b5b413f97f6fab9021070bbb4c3d
+Signer #1 public key MD5 digest: efeb74a6e4ddb98de6f9181d538ccc46
+Picked up JAVA_TOOL_OPTIONS: -Djava.io.tmpdir="G:\LectureMind-build\tmp"
