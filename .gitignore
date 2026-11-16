@@ -17,3 +17,5 @@ __pycache__/
 private/
 *.apk
 *.aab
+# Local-only credential provisioning helper; requires a private on-device input.
+app/src/androidTest/java/com/lecturemind/app/CredentialSetupTest.kt
