@@ -13,7 +13,7 @@ release.mkdir(parents=True, exist_ok=True)
 excluded_dirs = {'.git', '.gradle', '.kotlin', '.build-fast', 'build', '__pycache__', 'private'}
 excluded_names = {'local.properties', 'signing-password.txt'}
 excluded_suffixes = {'.jks', '.keystore', '.pem', '.env', '.hprof', '.apk', '.aab', '.pyc'}
-secret = re.compile(rb'(AIza[0-9A-Za-z_-]{30,}|sk-(?:proj-|svcacct-)?[0-9A-Za-z_-]{20,})')
+secret = re.compile(rb'(AIza[0-9A-Za-z_-]{30,}|AQ\.[0-9A-Za-z_-]{30,}|sk-(?:proj-|svcacct-)?[0-9A-Za-z_-]{20,})')
 files = []
 candidates = []
 for directory, dirs, names in os.walk(project):

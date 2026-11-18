@@ -4,6 +4,7 @@ import android.content.Context
 import android.security.keystore.KeyGenParameterSpec
 import android.security.keystore.KeyProperties
 import android.util.Base64
+import com.lecturemind.app.ai.LectureLanguages
 import javax.crypto.Cipher
 import javax.crypto.KeyGenerator
 import javax.crypto.SecretKey
@@ -17,8 +18,8 @@ class SecureSettings(context: Context) {
         get() = prefs.getString("provider", "Gemini") ?: "Gemini"
         set(value) { require(value in listOf("Gemini", "OpenAI")); prefs.edit().putString("provider", value).apply() }
     var language: String
-        get() = prefs.getString("language", "English") ?: "English"
-        set(value) { prefs.edit().putString("language", value).apply() }
+        get() = LectureLanguages.canonicalOutput(prefs.getString("language", "English") ?: "English") ?: "English"
+        set(value) { val selected=LectureLanguages.canonicalOutput(value) ?: error("Choose a supported study language.");prefs.edit().putString("language", selected).apply() }
     var appearance: String
         get() = prefs.getString("appearance", "System") ?: "System"
         set(value) { prefs.edit().putString("appearance", value).apply() }

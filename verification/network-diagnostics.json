@@ -1,0 +1,25 @@
+{
+  "model": "gemini-3.8-flash",
+  "addresses": [
+    "Inet4Address",
+    "Inet4Address",
+    "Inet4Address",
+    "Inet4Address",
+    "Inet4Address",
+    "Inet4Address",
+    "Inet4Address",
+    "Inet4Address"
+  ],
+  "results": [
+    {
+      "revisionHeader": false,
+      "httpStatus": 200,
+      "elapsedMs": 198956
+    },
+    {
+      "revisionHeader": true,
+      "httpStatus": 200,
+      "elapsedMs": 255
+    }
+  ]
+}

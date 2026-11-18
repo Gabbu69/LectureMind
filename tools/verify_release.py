@@ -46,7 +46,7 @@ with zipfile.ZipFile(apk) as archive:
     assert not any(name.endswith(('.jks', '.keystore', '.pem')) for name in names)
     # No known provider API-key format may be embedded in application files.
     import re
-    pattern = re.compile(rb'(AIza[0-9A-Za-z_-]{30,}|sk-(?:proj-|svcacct-)?[0-9A-Za-z_-]{20,})')
+    pattern = re.compile(rb'(AIza[0-9A-Za-z_-]{30,}|AQ\.[0-9A-Za-z_-]{30,}|sk-(?:proj-|svcacct-)?[0-9A-Za-z_-]{20,})')
     for name in names:
         if not name.startswith('META-INF/'):
             assert not pattern.search(archive.read(name)), 'Potential provider key found in APK entry: ' + name

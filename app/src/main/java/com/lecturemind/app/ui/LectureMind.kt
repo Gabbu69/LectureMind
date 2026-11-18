@@ -106,7 +106,7 @@ import java.util.*
         if(showNew) {
             var consent by remember { mutableStateOf(false) }
             AlertDialog(onDismissRequest={showNew=false},icon={Icon(Icons.Outlined.Mic,None)},title={Text("A little clarity starts here")},text={
-                Column(verticalArrangement=Arrangement.spacedBy(14.dp)) {
+                Column(Modifier.verticalScroll(rememberScrollState()),verticalArrangement=Arrangement.spacedBy(14.dp)) {
                     Text("Save a lecture on your phone. Generate AI notes after class, whenever you're ready.")
                     OutlinedTextField(draftTitle,{draftTitle=it.take(120)},label={Text("Lecture title")},singleLine=true)
                     OutlinedTextField(draftSubject,{draftSubject=it.take(60)},label={Text("Subject")},singleLine=true)
@@ -155,7 +155,13 @@ private val None: String? = null
                 }
             }
         }
-        item { Row(Modifier.fillMaxWidth(),horizontalArrangement=Arrangement.SpaceBetween,verticalAlignment=Alignment.CenterVertically) { Text(if(study) "Your study space" else "Your library",style=MaterialTheme.typography.titleLarge);Text("${if(study) lectures.count { it.notes.isNotBlank() } else lectures.size} lectures",style=MaterialTheme.typography.bodyMedium,color=MaterialTheme.colorScheme.onSurfaceVariant) } }
+        item {
+            val count=if(study) lectures.count { it.notes.isNotBlank() } else lectures.size
+            Row(Modifier.fillMaxWidth(),horizontalArrangement=Arrangement.SpaceBetween,verticalAlignment=Alignment.CenterVertically) {
+                Text(if(study) "Your study space" else "Your library",style=MaterialTheme.typography.titleLarge)
+                Text("$count ${if(count==1) "lecture" else "lectures"}",style=MaterialTheme.typography.bodyMedium,color=MaterialTheme.colorScheme.onSurfaceVariant)
+            }
+        }
         if(lectures.isNotEmpty()) item {
             OutlinedTextField(search,{search=it},Modifier.fillMaxWidth(),placeholder={Text("Search lectures and notes")},leadingIcon={Icon(Icons.Outlined.Search,null)},singleLine=true,shape=RoundedCornerShape(16.dp))
             if(subjects.size>2) Row(Modifier.horizontalScroll(rememberScrollState()).padding(top=8.dp),horizontalArrangement=Arrangement.spacedBy(8.dp)) { subjects.forEach { name -> FilterChip(selected=subject==name,onClick={subject=name},label={Text(name)}) } }
@@ -255,7 +261,7 @@ private fun statusLabel(status: String)=when(status){"ready"->"Ready to study";"
     }}){Text("Delete",color=MaterialTheme.colorScheme.error)}},dismissButton={TextButton(onClick={delete=false}){Text("Keep lecture")}})
     if(rename) {
         var title by remember { mutableStateOf(current.title) };var subject by remember { mutableStateOf(current.subject) }
-        AlertDialog(onDismissRequest={rename=false},title={Text("Lecture details")},text={Column(verticalArrangement=Arrangement.spacedBy(12.dp)){OutlinedTextField(title,{title=it.take(120)},label={Text("Title")});OutlinedTextField(subject,{subject=it.take(60)},label={Text("Subject")})}},confirmButton={TextButton(enabled=title.isNotBlank(),onClick={scope.launch { withContext(Dispatchers.IO){dao.rename(id,title.trim(),subject.trim().ifBlank { "General" })};rename=false }}){Text("Save")}},dismissButton={TextButton(onClick={rename=false}){Text("Cancel")}})
+        AlertDialog(onDismissRequest={rename=false},title={Text("Lecture details")},text={Column(Modifier.verticalScroll(rememberScrollState()),verticalArrangement=Arrangement.spacedBy(12.dp)){OutlinedTextField(title,{title=it.take(120)},label={Text("Title")});OutlinedTextField(subject,{subject=it.take(60)},label={Text("Subject")})}},confirmButton={TextButton(enabled=title.isNotBlank(),onClick={scope.launch { withContext(Dispatchers.IO){dao.rename(id,title.trim(),subject.trim().ifBlank { "General" })};rename=false }}){Text("Save")}},dismissButton={TextButton(onClick={rename=false}){Text("Cancel")}})
     }
     error?.let { AlertDialog(onDismissRequest={error=null},title={Text("Lecture needs attention")},text={Text(it)},confirmButton={TextButton(onClick={error=null}){Text("OK")}}) }
 }
@@ -327,7 +333,7 @@ private fun statusLabel(status: String)=when(status){"ready"->"Ready to study";"
     }
     if(edit) {
         var draft by remember { mutableStateOf(text) }
-        AlertDialog(onDismissRequest={edit=false},title={Text("Edit your notes")},text={Column { Text("Your original transcript stays separate.",style=MaterialTheme.typography.bodySmall);Spacer(Modifier.height(12.dp));OutlinedTextField(draft,{draft=it.take(200000)},Modifier.fillMaxWidth().heightIn(min=180.dp,max=380.dp),label={Text("Notes")}) }},confirmButton={TextButton(onClick={scope.launch { withContext(Dispatchers.IO){app.database.dao().notes(lecture.id,draft)};edit=false }}){Text("Save notes")}},dismissButton={TextButton(onClick={edit=false}){Text("Cancel")}})
+        AlertDialog(onDismissRequest={edit=false},title={Text("Edit your notes")},text={Column(Modifier.verticalScroll(rememberScrollState())) { Text("Your original transcript stays separate.",style=MaterialTheme.typography.bodySmall);Spacer(Modifier.height(12.dp));OutlinedTextField(draft,{draft=it.take(200000)},Modifier.fillMaxWidth().heightIn(min=180.dp,max=380.dp),label={Text("Notes")}) }},confirmButton={TextButton(onClick={scope.launch { withContext(Dispatchers.IO){app.database.dao().notes(lecture.id,draft)};edit=false }}){Text("Save notes")}},dismissButton={TextButton(onClick={edit=false}){Text("Cancel")}})
     }
     if(export) AlertDialog(onDismissRequest={export=false},title={Text("Share your ${if(reviewer) "reviewer" else "notes"}")},text={Text("Create a readable PDF or a plain text file. API keys and private settings are never included.")},confirmButton={TextButton(onClick={export=false;runCatching{Exports.share(context,lecture.title,text,true,lecture.id)}.onFailure{onError("Unable to create a PDF. Check free storage and try again.")}}){Text("Share PDF")}},dismissButton={TextButton(onClick={export=false;runCatching{Exports.share(context,lecture.title,text,false,lecture.id)}.onFailure{onError("Unable to share the file. Check free storage and try again.")}}){Text("Share text")}})
 }
@@ -372,7 +378,7 @@ private fun statusLabel(status: String)=when(status){"ready"->"Ready to study";"
     AlertDialog(onDismissRequest=onDismiss,icon={Icon(Icons.Outlined.AutoAwesome,null)},title={Text(if(hasKey)"Create your study set" else "Connect your AI first")},text={Column(Modifier.verticalScroll(rememberScrollState()),verticalArrangement=Arrangement.spacedBy(14.dp)) {
         Text("$provider · $model",fontWeight=FontWeight.SemiBold)
         if(!hasKey) Text("Add your own $provider API key in Settings. It is encrypted on this phone and never bundled into the app.") else {
-            Text(if(uncached.isEmpty())"Your saved transcript will be sent to $provider. No audio needs to be uploaded again." else "${uncached.size} audio section(s), about ${uncached.sumOf{it.durationMs}/60000} minutes, will be sent to $provider for transcription. The transcript is then used for study materials.")
+            Text(if(uncached.isEmpty())"Your saved transcript will be sent to $provider. No audio needs to be uploaded again." else "${uncached.size} audio ${if(uncached.size==1) "section" else "sections"} (${formatTime(uncached.sumOf{it.durationMs})}) will be sent to $provider for transcription. The transcript is then used for study materials.")
             Text("Output: $language · Original lecture languages are preserved.",style=MaterialTheme.typography.bodyMedium)
             Text("Practice questions",style=MaterialTheme.typography.labelLarge)
             Row(horizontalArrangement=Arrangement.spacedBy(8.dp)){listOf(10,20,30).forEach{n->FilterChip(selected=count==n,onClick={count=n},label={Text("$n")})}}
@@ -411,9 +417,9 @@ private fun statusLabel(status: String)=when(status){"ready"->"Ready to study";"
         } } }
         item { SectionLabel("STUDY PREFERENCES",Icons.Outlined.School) }
         item { Card(colors=CardDefaults.cardColors(containerColor=MaterialTheme.colorScheme.surfaceContainerLow),shape=RoundedCornerShape(20.dp)){Column(Modifier.padding(18.dp),verticalArrangement=Arrangement.spacedBy(12.dp)) {
-            Text("Notes and reviewer language",style=MaterialTheme.typography.titleMedium)
-            FlowRow(horizontalArrangement=Arrangement.spacedBy(10.dp)){listOf("English","Filipino").forEach{l->FilterChip(selected=language==l,onClick={language=l;app.settings.language=l},label={Text(l)})}}
-            Text("Lectures can mix English and Filipino. Technical terms and the original transcript are preserved.",style=MaterialTheme.typography.bodyMedium,color=MaterialTheme.colorScheme.onSurfaceVariant)
+            Text("Notes, reviewer and quiz language",style=MaterialTheme.typography.titleMedium)
+            FlowRow(horizontalArrangement=Arrangement.spacedBy(10.dp),verticalArrangement=Arrangement.spacedBy(6.dp)){LectureLanguages.outputOptions.forEach{l->FilterChip(selected=language==l,onClick={language=l;app.settings.language=l},label={Text(l)})}}
+            Text("Lecture languages: Ilonggo/Hiligaynon, Bisaya/Cebuano, Tagalog/Filipino and English. Mixed speech stays in its original language in the transcript. AI can mishear local words; use the audio to check unclear speech.",style=MaterialTheme.typography.bodyMedium,color=MaterialTheme.colorScheme.onSurfaceVariant)
             HorizontalDivider();Text("Appearance",style=MaterialTheme.typography.titleMedium)
             FlowRow(horizontalArrangement=Arrangement.spacedBy(8.dp)){listOf("System","Light","Dark").forEach{a->FilterChip(selected=appearance==a,onClick={app.settings.appearance=a;onAppearance(a)},label={Text(a)})}}
         }} }

@@ -1,0 +1,110 @@
+[
+  {
+    "elapsedMs": 800,
+    "pssKb": 215749
+  },
+  {
+    "elapsedMs": 60000,
+    "pssKb": 136149
+  },
+  {
+    "elapsedMs": 120200,
+    "pssKb": 136553
+  },
+  {
+    "elapsedMs": 180200,
+    "pssKb": 137146
+  },
+  {
+    "elapsedMs": 240400,
+    "pssKb": 137610
+  },
+  {
+    "elapsedMs": 300800,
+    "pssKb": 138227
+  },
+  {
+    "elapsedMs": 360000,
+    "pssKb": 138732
+  },
+  {
+    "elapsedMs": 420000,
+    "pssKb": 138946
+  },
+  {
+    "elapsedMs": 480200,
+    "pssKb": 139357
+  },
+  {
+    "elapsedMs": 540400,
+    "pssKb": 139865
+  },
+  {
+    "elapsedMs": 600600,
+    "pssKb": 140375
+  },
+  {
+    "elapsedMs": 660800,
+    "pssKb": 140863
+  },
+  {
+    "elapsedMs": 720000,
+    "pssKb": 217297
+  },
+  {
+    "elapsedMs": 780200,
+    "pssKb": 219428
+  },
+  {
+    "elapsedMs": 840200,
+    "pssKb": 141711
+  },
+  {
+    "elapsedMs": 900400,
+    "pssKb": 143277
+  },
+  {
+    "elapsedMs": 960400,
+    "pssKb": 209390
+  },
+  {
+    "elapsedMs": 1020600,
+    "pssKb": 211458
+  },
+  {
+    "elapsedMs": 1080800,
+    "pssKb": 215319
+  },
+  {
+    "elapsedMs": 1140800,
+    "pssKb": 215037
+  },
+  {
+    "elapsedMs": 1200000,
+    "pssKb": 216707
+  },
+  {
+    "elapsedMs": 1260000,
+    "pssKb": 218490
+  },
+  {
+    "elapsedMs": 1320200,
+    "pssKb": 220230
+  },
+  {
+    "elapsedMs": 1380400,
+    "pssKb": 209822
+  },
+  {
+    "elapsedMs": 1440400,
+    "pssKb": 211578
+  },
+  {
+    "elapsedMs": 1500600,
+    "pssKb": 144653
+  },
+  {
+    "elapsedMs": 1560800,
+    "pssKb": 133601
+  }
+]

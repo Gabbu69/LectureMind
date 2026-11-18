@@ -1,8 +1,8 @@
 {
-  "verified_at": "2026-11-16T08:32:14.179159+00:00",
+  "verified_at": "2026-11-18T03:46:03.470850+00:00",
   "apk": "G:\\LectureMind-build\\releases\\LectureMind-1.0.0.apk",
   "size_bytes": 11090711,
-  "sha256": "07c31e6a7e7a024ef5dc9a432185f39b4a465afa87a4e5867199d5aa9f512073",
+  "sha256": "27c2dc24979e4a007816e8d429a6d620e8699180ce9ba06c64b1d9c8d50e28a0",
   "package": "com.lecturemind.app",
   "version": "1.0.0",
   "minimum_sdk": 26,

@@ -1,0 +1,13 @@
+{
+  "checkedOn": "2026-11-18",
+  "installedReleaseSha256": "27c2dc24979e4a007816e8d429a6d620e8699180ce9ba06c64b1d9c8d50e28a0",
+  "provider": "Gemini",
+  "model": "gemini-3.8-flash",
+  "outputLanguage": "English",
+  "savedKeyRetained": true,
+  "knownFixtureRetainedAfterReinstall": true,
+  "ownedSyntheticFixtureDeleted": true,
+  "testPackageRemoved": true,
+  "chargingWakefulnessRestored": "15",
+  "liveGenerationAccepted": false
+}

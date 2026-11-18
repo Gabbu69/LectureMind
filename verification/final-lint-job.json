@@ -1,0 +1,12 @@
+{
+  "startedAt": "2026-11-16T13:54:01.801569+00:00",
+  "script": "phone_tests_build.py",
+  "arguments": [
+    "lintDebug",
+    "lintVitalRelease"
+  ],
+  "state": "finished",
+  "childPid": 17040,
+  "exitCode": 0,
+  "finishedAt": "2026-11-16T13:56:00.081120+00:00"
+}

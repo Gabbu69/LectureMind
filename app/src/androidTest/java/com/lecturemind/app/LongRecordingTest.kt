@@ -25,6 +25,7 @@ class LongRecordingTest {
         val lecture=Lecture(title="60-minute local recorder endurance test",subject="Verification",status="recording");app.database.dao().insert(lecture)
         app.startActivity(Intent(app,MainActivity::class.java).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK));delay(2000)
         instrumentation.runOnMainSync{RecordingService.command(app,RecordingService.START,lecture.id)}
+        val probe=EnduranceProbe(instrumentation,app)
         val start=System.currentTimeMillis();var locked=false;var reportedMinute=-1L
         try {
             while(RecordingService.state.value.durationMs<3600000) {
@@ -33,7 +34,7 @@ class LongRecordingTest {
                 if(System.currentTimeMillis()-start>15000 && !locked){UiDevice.getInstance(instrumentation).sleep();locked=true}
                 assertEquals(lecture.id,RecordingService.state.value.lectureId)
                 val minute=RecordingService.state.value.durationMs/60000
-                if(minute!=reportedMinute){reportedMinute=minute;instrumentation.sendStatus(2,android.os.Bundle().apply{putString("stream","Captured ${com.lecturemind.app.recording.formatTime(RecordingService.state.value.durationMs)} / 60:00; app PSS ${android.os.Debug.getPss()/1024} MB\n")})}
+                if(minute!=reportedMinute){reportedMinute=minute;probe.tick(RecordingService.state.value.durationMs);instrumentation.sendStatus(2,android.os.Bundle().apply{putString("stream","Captured ${com.lecturemind.app.recording.formatTime(RecordingService.state.value.durationMs)} / 60:00; app PSS ${android.os.Debug.getPss()/1024} MB\n")})}
             }
         } finally {
             instrumentation.runOnMainSync{RecordingService.command(app,RecordingService.STOP)}
@@ -42,7 +43,13 @@ class LongRecordingTest {
         val parts=app.database.dao().audio(lecture.id)
         assertTrue(parts.size>=12);assertTrue(parts.all{it.finalized});assertTrue(parts.sumOf{it.durationMs}>=3600000)
         assertTrue(parts.sumOf{File(it.path).length()} in 115_000_000..116_000_000)
-        File(app.filesDir,"audio/${lecture.id}").deleteRecursively();app.database.dao().delete(lecture.id)
+        probe.verifyAndReport(parts,locked)
+        val testAudio=File(app.filesDir,"audio/${lecture.id}")
+        assertEquals(File(app.filesDir,"audio").canonicalFile,testAudio.canonicalFile.parentFile)
+        assertTrue(testAudio.deleteRecursively())
+        assertFalse(testAudio.exists())
+        app.database.dao().delete(lecture.id)
+        probe.markAudioDeleted()
         UiDevice.getInstance(instrumentation).wakeUp()
     }
 }

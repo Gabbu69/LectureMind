@@ -27,6 +27,21 @@ class CoreTests {
     @Test(expected=IllegalArgumentException::class) fun rejectsRepeatedQuestions() { val obj=JSONObject(study());obj.getJSONArray("questions").put(obj.getJSONArray("questions").get(0));ContentCodec.validate(obj.toString(),setOf("p0s0"),10) }
     @Test fun acceptsExplicitInsufficientContent() { val content=ContentCodec.validate("""{"notes":[],"reviewer":[],"questions":[],"insufficient":true,"reason":"No clear speech"}""",emptySet(),10);assertTrue(content.insufficient);assertTrue(content.questions.isEmpty()) }
     @Test fun transcriptPreservesLanguageAndTimestamps() { val segments=listOf(Speech("p0s0",1234,2345,"Ang photosynthesis ay gumagamit ng light."));assertEquals(segments,ContentCodec.speech(ContentCodec.speechJson(segments))) }
+    @Test fun regionalLanguagePreferencesKeepLegacyFilipinoSelection() {
+        assertEquals("Filipino / Tagalog",LectureLanguages.canonicalOutput("Filipino"))
+        assertEquals("Filipino / Tagalog",LectureLanguages.canonicalOutput("Tagalog"))
+        assertEquals("Ilonggo (Hiligaynon)",LectureLanguages.canonicalOutput("Hiligaynon"))
+        assertEquals("Bisaya (Cebuano)",LectureLanguages.canonicalOutput("Cebuano"))
+        assertNull(LectureLanguages.canonicalOutput("unsupported-language"))
+    }
+    @Test fun regionalSpeechSurvivesSavingWithoutTranslationOrLostReferences() {
+        val segments=listOf(
+            Speech("p0s0",0,2000,"Maayong aga. Ang chlorophyll naga-absorb sang light."),
+            Speech("p0s1",2000,4000,"Maayong buntag. Ang tanom nagkinahanglan og tubig."),
+            Speech("p0s2",4000,6000,"Magandang umaga. Kailangan ng halaman ang liwanag. [unclear]"))
+        assertEquals(segments,ContentCodec.speech(ContentCodec.speechJson(segments)))
+        assertEquals(listOf("p0s0","p0s1","p0s2"),ContentCodec.speech(ContentCodec.speechJson(segments)).map{it.id})
+    }
     @Test fun malformedOutputProducesActionableError() { val error=runCatching{ContentCodec.parseObject("not JSON")}.exceptionOrNull();assertNotNull(error);assertTrue(error!!.message!!.contains("unreadable")) }
     @Test fun wavHeaderHasCorrectRateAndLength() { val h=ByteBuffer.wrap(WavFile.header(32000)).order(ByteOrder.LITTLE_ENDIAN);assertEquals(32036,h.getInt(4));assertEquals(16000,h.getInt(24));assertEquals(32000,h.getInt(28));assertEquals(32000,h.getInt(40)) }
     @Test fun crashRecoveryRepairsPartialSampleAndDuration() {

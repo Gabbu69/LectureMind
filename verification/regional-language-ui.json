@@ -1,0 +1,16 @@
+{
+  "checkedOn": "2026-11-18",
+  "options": [
+    "English",
+    "Filipino / Tagalog",
+    "Ilonggo (Hiligaynon)",
+    "Bisaya (Cebuano)"
+  ],
+  "ilonggoSelectionRetainedAcrossNavigation": true,
+  "bisayaSelectionChecked": true,
+  "restoredOutput": "English",
+  "encryptedKeyStillSaved": true,
+  "connectionMessages": [
+    "Connected to Gemini. Model access is available. Audio and generation are tested when you create a study set."
+  ]
+}

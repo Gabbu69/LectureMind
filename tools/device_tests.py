@@ -13,9 +13,10 @@ if mode=='install':
         run(['install','--user','0','-r','-g','-t',str(apk)])
     run(['shell','am','start','--user','0','-n','com.lecturemind.app/.MainActivity'])
 else:
-    classes={'long':'com.lecturemind.app.LongRecordingTest','recovery-seed':'com.lecturemind.app.RecoverySeedTest','recovery-check':'com.lecturemind.app.RecoveryCheckTest'}.get(mode,'com.lecturemind.app.DeviceTests,com.lecturemind.app.UiAcceptanceTest,com.lecturemind.app.ExportTest')
+    classes={'long':'com.lecturemind.app.LongRecordingTest','manual-check':'com.lecturemind.app.ManualEnduranceCheckTest','endurance-cleanup':'com.lecturemind.app.InterruptedEnduranceCleanupTest','recovery-seed':'com.lecturemind.app.RecoverySeedTest','recovery-check':'com.lecturemind.app.RecoveryCheckTest','ai-diagnostic':'com.lecturemind.app.AiTranscriptDiagnosticTest','ai-snapshot':'com.lecturemind.app.AiFixtureSnapshotTest'}.get(mode,'com.lecturemind.app.DeviceTests,com.lecturemind.app.UiAcceptanceTest,com.lecturemind.app.ExportTest')
     args=[adb,'shell','am','instrument','--user','0','-w','-r','-e','class',classes]
     if mode=='long':args+=['-e','longRecording','true']
+    if mode=='manual-check':args+=['-e','screenLocked','true']
     args+=['com.lecturemind.app.test/androidx.test.runner.AndroidJUnitRunner']
     logs=fast/'logs';logs.mkdir(parents=True,exist_ok=True)
     path=logs/('device-'+mode+'-'+datetime.datetime.now().strftime('%Y%m%d-%H%M%S')+'.log')

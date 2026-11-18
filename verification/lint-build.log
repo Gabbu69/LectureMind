@@ -1,12 +1,7 @@
+Picked up JAVA_TOOL_OPTIONS: -Djava.io.tmpdir="G:\LectureMind\.build-fast\tmp"
 To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/9.3.1/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
 Daemon will be stopped at the end of the build 
 Warning: SDK processing. This version only understands SDK XML versions up to 3 but an SDK XML file of version 4 was encountered. This can happen if you use versions of Android Studio and the command-line tools that were released at different times.
-Observed package id 'platform-tools' in inconsistent location 'E:\LectureMind-build\sdk\platform-tools-2' (Expected 'E:\LectureMind-build\sdk\platform-tools')
-Observed package id 'platform-tools' in inconsistent location 'E:\LectureMind-build\sdk\platform-tools-2' (Expected 'E:\LectureMind-build\sdk\platform-tools')
-Observed package id 'platform-tools' in inconsistent location 'E:\LectureMind-build\sdk\platform-tools-2' (Expected 'E:\LectureMind-build\sdk\platform-tools')
-Observed package id 'platform-tools' in inconsistent location 'E:\LectureMind-build\sdk\platform-tools-2' (Expected 'E:\LectureMind-build\sdk\platform-tools')
-Warning: Observed package id 'platform-tools' in inconsistent location 'E:\LectureMind-build\sdk\platform-tools-2' (Expected 'E:\LectureMind-build\sdk\platform-tools')
-Info: SDK Manager found the following installed packages: build-tools;36.0.0 platform-tools platforms;android-36
 > Task :app:preBuild UP-TO-DATE
 > Task :app:preDebugBuild UP-TO-DATE
 > Task :app:generateDebugBuildConfig UP-TO-DATE
@@ -31,17 +26,17 @@ Info: SDK Manager found the following installed packages: build-tools;36.0.0 pla
 > Task :app:processDebugResources UP-TO-DATE
 > Task :app:bundleDebugClassesToCompileJar UP-TO-DATE
 > Task :app:preDebugAndroidTestBuild SKIPPED
-> Task :app:generateDebugAndroidTestLintModel
+> Task :app:generateDebugAndroidTestLintModel UP-TO-DATE
 > Task :app:extractProguardFiles UP-TO-DATE
-> Task :app:generateDebugLintReportModel
+> Task :app:generateDebugLintReportModel UP-TO-DATE
 > Task :app:preDebugUnitTestBuild UP-TO-DATE
-> Task :app:generateDebugUnitTestLintModel
-> Task :app:lintAnalyzeDebug
+> Task :app:generateDebugUnitTestLintModel UP-TO-DATE
+> Task :app:lintAnalyzeDebug UP-TO-DATE
 > Task :app:lintAnalyzeDebugAndroidTest
 > Task :app:lintAnalyzeDebugUnitTest
 
 > Task :app:lintReportDebug
-Wrote HTML report to file:///D:/LectureMind/.build-fast/outputs/app/reports/lint-results-debug.html
+Wrote HTML report to file:///G:/LectureMind/.build-fast/outputs/app/reports/lint-results-debug.html
 
 > Task :app:lintDebug
 > Task :app:preReleaseBuild UP-TO-DATE
@@ -53,18 +48,18 @@ Wrote HTML report to file:///D:/LectureMind/.build-fast/outputs/app/reports/lint
 > Task :app:generateReleaseRFile UP-TO-DATE
 > Task :app:kspReleaseKotlin UP-TO-DATE
 > Task :app:compileReleaseKotlin UP-TO-DATE
-> Task :app:javaPreCompileRelease
-> Task :app:compileReleaseJavaWithJavac
-> Task :app:extractDeepLinksRelease
-> Task :app:processReleaseMainManifest
+> Task :app:javaPreCompileRelease UP-TO-DATE
+> Task :app:compileReleaseJavaWithJavac UP-TO-DATE
+> Task :app:extractDeepLinksRelease UP-TO-DATE
+> Task :app:processReleaseMainManifest UP-TO-DATE
 > Task :app:generateReleaseLintVitalReportModel
 > Task :app:lintVitalAnalyzeRelease
-> Task :app:lintVitalReportRelease
+> Task :app:lintVitalReportRelease UP-TO-DATE
 > Task :app:lintVitalRelease
 Persisted dependency lock state for buildscript of root project 'LectureMind'
 Persisted dependency lock state for project ':app'
 
-[Incubating] Problems report is available at: file:///D:/LectureMind/.build-fast/outputs/LectureMind/reports/problems/problems-report.html
+[Incubating] Problems report is available at: file:///G:/LectureMind/.build-fast/outputs/LectureMind/reports/problems/problems-report.html
 
 Deprecated Gradle features were used in this build, making it incompatible with Gradle 10.
 
@@ -72,8 +67,8 @@ You can use '--warning-mode all' to show the individual deprecation warnings and
 
 For more on this, please refer to https://docs.gradle.org/9.3.1/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
 
-BUILD SUCCESSFUL in 3m 39s
-46 actionable tasks: 16 executed, 30 up-to-date
+BUILD SUCCESSFUL in 3m 48s
+46 actionable tasks: 7 executed, 39 up-to-date
 Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.3.1/userguide/configuration_cache_enabling.html
 
 PROCESS_EXIT_CODE=0

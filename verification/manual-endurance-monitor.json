@@ -1,0 +1,718 @@
+{
+  "startedAt": "2026-11-16T13:35:46.924Z",
+  "title": "Lecture mind endurance check 2026-11-16",
+  "subject": "Verification",
+  "captureMode": "Normal app UI; no instrumentation attached during capture",
+  "audioUploaded": false,
+  "samples": [
+    {
+      "observedAt": "2026-11-16T13:39:05.984978+00:00",
+      "hostElapsedMs": 198269,
+      "recorderForeground": true,
+      "pssKb": 113961,
+      "powerState": "Dozing"
+    },
+    {
+      "observedAt": "2026-11-16T13:39:37.728518+00:00",
+      "hostElapsedMs": 229315,
+      "recorderForeground": true,
+      "pssKb": 109786,
+      "powerState": "Dozing"
+    },
+    {
+      "observedAt": "2026-11-16T13:40:09.243862+00:00",
+      "hostElapsedMs": 260820,
+      "recorderForeground": true,
+      "pssKb": 109771,
+      "powerState": "Dozing"
+    },
+    {
+      "observedAt": "2026-11-16T13:40:40.064668+00:00",
+      "hostElapsedMs": 292324,
+      "recorderForeground": true,
+      "pssKb": 109770,
+      "powerState": "Dozing"
+    },
+    {
+      "observedAt": "2026-11-16T13:41:10.726859+00:00",
+      "hostElapsedMs": 323144,
+      "recorderForeground": true,
+      "pssKb": 108837,
+      "powerState": "Dozing"
+    },
+    {
+      "observedAt": "2026-11-16T13:41:41.393046+00:00",
+      "hostElapsedMs": 353806,
+      "recorderForeground": true,
+      "pssKb": 108819,
+      "powerState": "Dozing"
+    },
+    {
+      "observedAt": "2026-11-16T13:42:12.317449+00:00",
+      "hostElapsedMs": 384473,
+      "recorderForeground": true,
+      "pssKb": 108829,
+      "powerState": "Dozing"
+    },
+    {
+      "observedAt": "2026-11-16T13:42:43.146941+00:00",
+      "hostElapsedMs": 415401,
+      "recorderForeground": true,
+      "pssKb": 195160,
+      "powerState": "Awake"
+    },
+    {
+      "observedAt": "2026-11-16T13:43:13.848153+00:00",
+      "hostElapsedMs": 446277,
+      "recorderForeground": true,
+      "pssKb": 185865,
+      "powerState": "Awake"
+    },
+    {
+      "observedAt": "2026-11-16T13:43:44.545679+00:00",
+      "hostElapsedMs": 476932,
+      "recorderForeground": true,
+      "pssKb": 185122,
+      "powerState": "Awake"
+    },
+    {
+      "observedAt": "2026-11-16T13:44:15.184993+00:00",
+      "hostElapsedMs": 507637,
+      "recorderForeground": true,
+      "pssKb": 185676,
+      "powerState": "Awake"
+    },
+    {
+      "observedAt": "2026-11-16T13:44:45.797579+00:00",
+      "hostElapsedMs": 538265,
+      "recorderForeground": true,
+      "pssKb": 185637,
+      "powerState": "Awake"
+    },
+    {
+      "observedAt": "2026-11-16T13:45:16.986472+00:00",
+      "hostElapsedMs": 569420,
+      "recorderForeground": true,
+      "pssKb": 196609,
+      "powerState": "Awake"
+    },
+    {
+      "observedAt": "2026-11-16T13:45:47.620250+00:00",
+      "hostElapsedMs": 600069,
+      "recorderForeground": true,
+      "pssKb": 186089,
+      "powerState": "Awake"
+    },
+    {
+      "observedAt": "2026-11-16T13:46:18.203221+00:00",
+      "hostElapsedMs": 630701,
+      "recorderForeground": true,
+      "pssKb": 186929,
+      "powerState": "Awake"
+    },
+    {
+      "observedAt": "2026-11-16T13:46:48.822866+00:00",
+      "hostElapsedMs": 661290,
+      "recorderForeground": true,
+      "pssKb": 195875,
+      "powerState": "Awake"
+    },
+    {
+      "observedAt": "2026-11-16T13:47:19.722399+00:00",
+      "hostElapsedMs": 691904,
+      "recorderForeground": true,
+      "pssKb": 118682,
+      "powerState": "Dozing"
+    },
+    {
+      "observedAt": "2026-11-16T13:47:50.520639+00:00",
+      "hostElapsedMs": 722803,
+      "recorderForeground": true,
+      "pssKb": 106546,
+      "powerState": "Dozing"
+    },
+    {
+      "observedAt": "2026-11-16T13:48:21.174378+00:00",
+      "hostElapsedMs": 753617,
+      "recorderForeground": true,
+      "pssKb": 106654,
+      "powerState": "Dozing"
+    },
+    {
+      "observedAt": "2026-11-16T13:48:51.842435+00:00",
+      "hostElapsedMs": 784258,
+      "recorderForeground": true,
+      "pssKb": 106649,
+      "powerState": "Dozing"
+    },
+    {
+      "observedAt": "2026-11-16T13:49:22.494610+00:00",
+      "hostElapsedMs": 814923,
+      "recorderForeground": true,
+      "pssKb": 106649,
+      "powerState": "Dozing"
+    },
+    {
+      "observedAt": "2026-11-16T13:49:53.223186+00:00",
+      "hostElapsedMs": 845621,
+      "recorderForeground": true,
+      "pssKb": 106445,
+      "powerState": "Dozing"
+    },
+    {
+      "observedAt": "2026-11-16T13:50:23.915729+00:00",
+      "hostElapsedMs": 876303,
+      "recorderForeground": true,
+      "pssKb": 106434,
+      "powerState": "Dozing"
+    },
+    {
+      "observedAt": "2026-11-16T13:50:54.583030+00:00",
+      "hostElapsedMs": 907002,
+      "recorderForeground": true,
+      "pssKb": 106450,
+      "powerState": "Dozing"
+    },
+    {
+      "observedAt": "2026-11-16T13:51:25.257152+00:00",
+      "hostElapsedMs": 937664,
+      "recorderForeground": true,
+      "pssKb": 103900,
+      "powerState": "Dozing"
+    },
+    {
+      "observedAt": "2026-11-16T13:51:55.932964+00:00",
+      "hostElapsedMs": 968338,
+      "recorderForeground": true,
+      "pssKb": 103791,
+      "powerState": "Dozing"
+    },
+    {
+      "observedAt": "2026-11-16T13:52:26.602221+00:00",
+      "hostElapsedMs": 999039,
+      "recorderForeground": true,
+      "pssKb": 103784,
+      "powerState": "Dozing"
+    },
+    {
+      "observedAt": "2026-11-16T13:52:57.242606+00:00",
+      "hostElapsedMs": 1029682,
+      "recorderForeground": true,
+      "pssKb": 103783,
+      "powerState": "Dozing"
+    },
+    {
+      "observedAt": "2026-11-16T13:53:27.994815+00:00",
+      "hostElapsedMs": 1060407,
+      "recorderForeground": true,
+      "pssKb": 103791,
+      "powerState": "Dozing"
+    },
+    {
+      "observedAt": "2026-11-16T13:53:58.919635+00:00",
+      "hostElapsedMs": 1091353,
+      "recorderForeground": true,
+      "pssKb": 103791,
+      "powerState": "Dozing"
+    },
+    {
+      "observedAt": "2026-11-16T13:54:29.936107+00:00",
+      "hostElapsedMs": 1122344,
+      "recorderForeground": true,
+      "pssKb": 103795,
+      "powerState": "Dozing"
+    },
+    {
+      "observedAt": "2026-11-16T13:55:00.743448+00:00",
+      "hostElapsedMs": 1153018,
+      "recorderForeground": true,
+      "pssKb": 103808,
+      "powerState": "Dozing"
+    },
+    {
+      "observedAt": "2026-11-16T13:55:31.475014+00:00",
+      "hostElapsedMs": 1183825,
+      "recorderForeground": true,
+      "pssKb": 103816,
+      "powerState": "Dozing"
+    },
+    {
+      "observedAt": "2026-11-16T13:56:02.195723+00:00",
+      "hostElapsedMs": 1214555,
+      "recorderForeground": true,
+      "pssKb": 103844,
+      "powerState": "Dozing"
+    },
+    {
+      "observedAt": "2026-11-16T13:56:32.856106+00:00",
+      "hostElapsedMs": 1245296,
+      "recorderForeground": true,
+      "pssKb": 103828,
+      "powerState": "Dozing"
+    },
+    {
+      "observedAt": "2026-11-16T13:57:03.592610+00:00",
+      "hostElapsedMs": 1275944,
+      "recorderForeground": true,
+      "pssKb": 102538,
+      "powerState": "Dozing"
+    },
+    {
+      "observedAt": "2026-11-16T13:57:34.254970+00:00",
+      "hostElapsedMs": 1306674,
+      "recorderForeground": true,
+      "pssKb": 101882,
+      "powerState": "Dozing"
+    },
+    {
+      "observedAt": "2026-11-16T13:58:04.934083+00:00",
+      "hostElapsedMs": 1337381,
+      "recorderForeground": true,
+      "pssKb": 101095,
+      "powerState": "Dozing"
+    },
+    {
+      "observedAt": "2026-11-16T13:58:35.647148+00:00",
+      "hostElapsedMs": 1368066,
+      "recorderForeground": true,
+      "pssKb": 100730,
+      "powerState": "Dozing"
+    },
+    {
+      "observedAt": "2026-11-16T13:59:06.560787+00:00",
+      "hostElapsedMs": 1399003,
+      "recorderForeground": true,
+      "pssKb": 100321,
+      "powerState": "Dozing"
+    },
+    {
+      "observedAt": "2026-11-16T13:59:37.548707+00:00",
+      "hostElapsedMs": 1429973,
+      "recorderForeground": true,
+      "pssKb": 100357,
+      "powerState": "Dozing"
+    },
+    {
+      "observedAt": "2026-11-16T14:00:08.469665+00:00",
+      "hostElapsedMs": 1460904,
+      "recorderForeground": true,
+      "pssKb": 100278,
+      "powerState": "Dozing"
+    },
+    {
+      "observedAt": "2026-11-16T14:00:39.394643+00:00",
+      "hostElapsedMs": 1491833,
+      "recorderForeground": true,
+      "pssKb": 100304,
+      "powerState": "Dozing"
+    },
+    {
+      "observedAt": "2026-11-16T14:01:10.331142+00:00",
+      "hostElapsedMs": 1522813,
+      "recorderForeground": true,
+      "pssKb": 100414,
+      "powerState": "Dozing"
+    },
+    {
+      "observedAt": "2026-11-16T14:01:41.066758+00:00",
+      "hostElapsedMs": 1553460,
+      "recorderForeground": true,
+      "pssKb": 100289,
+      "powerState": "Dozing"
+    },
+    {
+      "observedAt": "2026-11-16T14:02:11.810504+00:00",
+      "hostElapsedMs": 1584199,
+      "recorderForeground": true,
+      "pssKb": 100285,
+      "powerState": "Dozing"
+    },
+    {
+      "observedAt": "2026-11-16T14:02:42.731265+00:00",
+      "hostElapsedMs": 1615169,
+      "recorderForeground": true,
+      "pssKb": 100269,
+      "powerState": "Dozing"
+    },
+    {
+      "observedAt": "2026-11-16T14:03:13.482642+00:00",
+      "hostElapsedMs": 1645905,
+      "recorderForeground": true,
+      "pssKb": 100261,
+      "powerState": "Dozing"
+    },
+    {
+      "observedAt": "2026-11-16T14:03:44.206070+00:00",
+      "hostElapsedMs": 1676614,
+      "recorderForeground": true,
+      "pssKb": 100250,
+      "powerState": "Dozing"
+    },
+    {
+      "observedAt": "2026-11-16T14:04:14.895876+00:00",
+      "hostElapsedMs": 1707335,
+      "recorderForeground": true,
+      "pssKb": 100243,
+      "powerState": "Dozing"
+    },
+    {
+      "observedAt": "2026-11-16T14:04:46.081417+00:00",
+      "hostElapsedMs": 1738324,
+      "recorderForeground": true,
+      "pssKb": 100269,
+      "powerState": "Dozing"
+    },
+    {
+      "observedAt": "2026-11-16T14:05:18.137748+00:00",
+      "hostElapsedMs": 1769212,
+      "recorderForeground": true,
+      "pssKb": 99814,
+      "powerState": "Dozing"
+    },
+    {
+      "observedAt": "2026-11-16T14:05:49.301413+00:00",
+      "hostElapsedMs": 1801622,
+      "recorderForeground": true,
+      "pssKb": 99841,
+      "powerState": "Dozing"
+    },
+    {
+      "observedAt": "2026-11-16T14:06:20.330777+00:00",
+      "hostElapsedMs": 1832650,
+      "recorderForeground": true,
+      "pssKb": 99458,
+      "powerState": "Dozing"
+    },
+    {
+      "observedAt": "2026-11-16T14:06:51.412237+00:00",
+      "hostElapsedMs": 1863775,
+      "recorderForeground": true,
+      "pssKb": 99568,
+      "powerState": "Dozing"
+    },
+    {
+      "observedAt": "2026-11-16T14:07:22.450808+00:00",
+      "hostElapsedMs": 1894841,
+      "recorderForeground": true,
+      "pssKb": 99570,
+      "powerState": "Dozing"
+    },
+    {
+      "observedAt": "2026-11-16T14:07:53.522094+00:00",
+      "hostElapsedMs": 1925810,
+      "recorderForeground": true,
+      "pssKb": 99602,
+      "powerState": "Dozing"
+    },
+    {
+      "observedAt": "2026-11-16T14:08:24.521719+00:00",
+      "hostElapsedMs": 1956944,
+      "recorderForeground": true,
+      "pssKb": 99634,
+      "powerState": "Dozing"
+    },
+    {
+      "observedAt": "2026-11-16T14:08:55.253910+00:00",
+      "hostElapsedMs": 1987654,
+      "recorderForeground": true,
+      "pssKb": 99642,
+      "powerState": "Dozing"
+    },
+    {
+      "observedAt": "2026-11-16T14:09:26.264511+00:00",
+      "hostElapsedMs": 2018665,
+      "recorderForeground": true,
+      "pssKb": 99641,
+      "powerState": "Dozing"
+    },
+    {
+      "observedAt": "2026-11-16T14:09:57.250351+00:00",
+      "hostElapsedMs": 2049619,
+      "recorderForeground": true,
+      "pssKb": 99706,
+      "powerState": "Dozing"
+    },
+    {
+      "observedAt": "2026-11-16T14:10:29.274250+00:00",
+      "hostElapsedMs": 2081672,
+      "recorderForeground": true,
+      "pssKb": 99494,
+      "powerState": "Dozing"
+    },
+    {
+      "observedAt": "2026-11-16T14:10:59.981125+00:00",
+      "hostElapsedMs": 2112409,
+      "recorderForeground": true,
+      "pssKb": 99450,
+      "powerState": "Dozing"
+    },
+    {
+      "observedAt": "2026-11-16T14:11:30.976724+00:00",
+      "hostElapsedMs": 2143398,
+      "recorderForeground": true,
+      "pssKb": 99451,
+      "powerState": "Dozing"
+    },
+    {
+      "observedAt": "2026-11-16T14:12:01.980323+00:00",
+      "hostElapsedMs": 2174340,
+      "recorderForeground": true,
+      "pssKb": 99447,
+      "powerState": "Dozing"
+    },
+    {
+      "observedAt": "2026-11-16T14:12:33.194916+00:00",
+      "hostElapsedMs": 2205397,
+      "recorderForeground": true,
+      "pssKb": 99451,
+      "powerState": "Dozing"
+    },
+    {
+      "observedAt": "2026-11-16T14:13:04.428534+00:00",
+      "hostElapsedMs": 2236585,
+      "recorderForeground": true,
+      "pssKb": 99454,
+      "powerState": "Dozing"
+    },
+    {
+      "observedAt": "2026-11-16T14:13:35.468849+00:00",
+      "hostElapsedMs": 2267847,
+      "recorderForeground": true,
+      "pssKb": 99450,
+      "powerState": "Dozing"
+    },
+    {
+      "observedAt": "2026-11-16T14:14:06.642436+00:00",
+      "hostElapsedMs": 2298870,
+      "recorderForeground": true,
+      "pssKb": 99462,
+      "powerState": "Dozing"
+    },
+    {
+      "observedAt": "2026-11-16T14:14:37.415505+00:00",
+      "hostElapsedMs": 2329773,
+      "recorderForeground": true,
+      "pssKb": 99452,
+      "powerState": "Dozing"
+    },
+    {
+      "observedAt": "2026-11-16T14:15:08.424529+00:00",
+      "hostElapsedMs": 2360812,
+      "recorderForeground": true,
+      "pssKb": 99464,
+      "powerState": "Dozing"
+    },
+    {
+      "observedAt": "2026-11-16T14:15:39.396425+00:00",
+      "hostElapsedMs": 2391781,
+      "recorderForeground": true,
+      "pssKb": 99460,
+      "powerState": "Dozing"
+    },
+    {
+      "observedAt": "2026-11-16T14:16:10.372443+00:00",
+      "hostElapsedMs": 2422789,
+      "recorderForeground": true,
+      "pssKb": 99497,
+      "powerState": "Dozing"
+    },
+    {
+      "observedAt": "2026-11-16T14:16:41.064729+00:00",
+      "hostElapsedMs": 2453507,
+      "recorderForeground": true,
+      "pssKb": 105779,
+      "powerState": "Awake"
+    },
+    {
+      "observedAt": "2026-11-16T14:17:11.681300+00:00",
+      "hostElapsedMs": 2484191,
+      "recorderForeground": true,
+      "pssKb": 100279,
+      "powerState": "Awake"
+    },
+    {
+      "observedAt": "2026-11-16T14:17:42.639467+00:00",
+      "hostElapsedMs": 2515093,
+      "recorderForeground": true,
+      "pssKb": 99862,
+      "powerState": "Awake"
+    },
+    {
+      "observedAt": "2026-11-16T14:18:13.482976+00:00",
+      "hostElapsedMs": 2546049,
+      "recorderForeground": true,
+      "pssKb": 99837,
+      "powerState": "Awake"
+    },
+    {
+      "observedAt": "2026-11-16T14:18:44.294470+00:00",
+      "hostElapsedMs": 2576840,
+      "recorderForeground": true,
+      "pssKb": 99876,
+      "powerState": "Awake"
+    },
+    {
+      "observedAt": "2026-11-16T14:19:16.261116+00:00",
+      "hostElapsedMs": 2607685,
+      "recorderForeground": true,
+      "pssKb": 99878,
+      "powerState": "Awake"
+    },
+    {
+      "observedAt": "2026-11-16T14:19:48.918772+00:00",
+      "hostElapsedMs": 2639468,
+      "recorderForeground": true,
+      "pssKb": 99739,
+      "powerState": "Awake"
+    },
+    {
+      "observedAt": "2026-11-16T14:20:19.569324+00:00",
+      "hostElapsedMs": 2672000,
+      "recorderForeground": true,
+      "pssKb": 96313,
+      "powerState": "Awake"
+    },
+    {
+      "observedAt": "2026-11-16T14:20:50.829862+00:00",
+      "hostElapsedMs": 2702650,
+      "recorderForeground": true,
+      "pssKb": 99035,
+      "powerState": "Awake"
+    },
+    {
+      "observedAt": "2026-11-16T14:21:21.647255+00:00",
+      "hostElapsedMs": 2733911,
+      "recorderForeground": true,
+      "pssKb": 94420,
+      "powerState": "Awake"
+    },
+    {
+      "observedAt": "2026-11-16T14:21:52.432363+00:00",
+      "hostElapsedMs": 2764731,
+      "recorderForeground": true,
+      "pssKb": 98290,
+      "powerState": "Awake"
+    },
+    {
+      "observedAt": "2026-11-16T14:22:23.027567+00:00",
+      "hostElapsedMs": 2795527,
+      "recorderForeground": true,
+      "pssKb": 99134,
+      "powerState": "Awake"
+    },
+    {
+      "observedAt": "2026-11-16T14:22:53.660604+00:00",
+      "hostElapsedMs": 2826165,
+      "recorderForeground": true,
+      "pssKb": 99008,
+      "powerState": "Awake"
+    },
+    {
+      "observedAt": "2026-11-16T14:23:24.569421+00:00",
+      "hostElapsedMs": 2857086,
+      "recorderForeground": true,
+      "pssKb": 99170,
+      "powerState": "Awake"
+    },
+    {
+      "observedAt": "2026-11-16T14:23:55.624749+00:00",
+      "hostElapsedMs": 2888004,
+      "recorderForeground": true,
+      "pssKb": 99242,
+      "powerState": "Awake"
+    },
+    {
+      "observedAt": "2026-11-16T14:24:26.605029+00:00",
+      "hostElapsedMs": 2918707,
+      "recorderForeground": true,
+      "pssKb": 99146,
+      "powerState": "Awake"
+    },
+    {
+      "observedAt": "2026-11-16T14:24:57.433749+00:00",
+      "hostElapsedMs": 2949728,
+      "recorderForeground": true,
+      "pssKb": 187914,
+      "powerState": "Awake"
+    },
+    {
+      "observedAt": "2026-11-16T14:30:52.688051+00:00",
+      "hostElapsedMs": 3305032,
+      "recorderForeground": true,
+      "pssKb": 106133,
+      "powerState": "Awake"
+    },
+    {
+      "observedAt": "2026-11-16T14:31:23.379808+00:00",
+      "hostElapsedMs": 3335793,
+      "recorderForeground": true,
+      "pssKb": 100223,
+      "powerState": "Awake"
+    },
+    {
+      "observedAt": "2026-11-16T14:31:54.143545+00:00",
+      "hostElapsedMs": 3366460,
+      "recorderForeground": true,
+      "pssKb": 100143,
+      "powerState": "Awake"
+    },
+    {
+      "observedAt": "2026-11-16T14:32:24.802398+00:00",
+      "hostElapsedMs": 3397223,
+      "recorderForeground": true,
+      "pssKb": 100133,
+      "powerState": "Awake"
+    },
+    {
+      "observedAt": "2026-11-16T14:32:55.530620+00:00",
+      "hostElapsedMs": 3427915,
+      "recorderForeground": true,
+      "pssKb": 100001,
+      "powerState": "Awake"
+    },
+    {
+      "observedAt": "2026-11-16T14:33:26.151957+00:00",
+      "hostElapsedMs": 3458630,
+      "recorderForeground": true,
+      "pssKb": 100017,
+      "powerState": "Awake"
+    },
+    {
+      "observedAt": "2026-11-16T14:33:56.744690+00:00",
+      "hostElapsedMs": 3489231,
+      "recorderForeground": true,
+      "pssKb": 100013,
+      "powerState": "Awake"
+    },
+    {
+      "observedAt": "2026-11-16T14:34:27.390951+00:00",
+      "hostElapsedMs": 3519824,
+      "recorderForeground": true,
+      "pssKb": 100021,
+      "powerState": "Awake"
+    },
+    {
+      "observedAt": "2026-11-16T14:34:58.031111+00:00",
+      "hostElapsedMs": 3550476,
+      "recorderForeground": true,
+      "pssKb": 100021,
+      "powerState": "Awake"
+    },
+    {
+      "observedAt": "2026-11-16T14:35:29.762434+00:00",
+      "hostElapsedMs": 3581113,
+      "recorderForeground": true,
+      "pssKb": 100079,
+      "powerState": "Awake"
+    },
+    {
+      "observedAt": "2026-11-16T14:36:00.353591+00:00",
+      "hostElapsedMs": 3612854,
+      "recorderForeground": true,
+      "pssKb": 100143,
+      "powerState": "Awake"
+    }
+  ],
+  "lastObservedAt": "2026-11-16T14:36:00.353591+00:00",
+  "monitorState": "observation-complete-awaiting-save"
+}

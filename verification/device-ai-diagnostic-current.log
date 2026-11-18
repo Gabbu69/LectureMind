@@ -1,0 +1,47 @@
+INSTRUMENTATION_STATUS: class=com.lecturemind.app.AiTranscriptDiagnosticTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=1
+INSTRUMENTATION_STATUS: stream=
+com.lecturemind.app.AiTranscriptDiagnosticTest:
+INSTRUMENTATION_STATUS: test=inspectSyntheticTranscriptResponse
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.lecturemind.app.AiTranscriptDiagnosticTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=1
+INSTRUMENTATION_STATUS: stack=java.io.IOException: Could not reach the AI provider. Check your connection and retry.
+	at com.lecturemind.app.ai.ProviderHttp$request$2$2.onFailure(AiProvider.kt:47)
+	at okhttp3.internal.connection.RealCall$AsyncCall.run(RealCall.kt:525)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1100)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:1571)
+
+INSTRUMENTATION_STATUS: stream=
+Error in inspectSyntheticTranscriptResponse(com.lecturemind.app.AiTranscriptDiagnosticTest):
+java.io.IOException: Could not reach the AI provider. Check your connection and retry.
+	at com.lecturemind.app.ai.ProviderHttp$request$2$2.onFailure(AiProvider.kt:47)
+	at okhttp3.internal.connection.RealCall$AsyncCall.run(RealCall.kt:525)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1100)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:1571)
+
+INSTRUMENTATION_STATUS: test=inspectSyntheticTranscriptResponse
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_RESULT: stream=
+
+Time: 408.723
+There was 1 failure:
+1) inspectSyntheticTranscriptResponse(com.lecturemind.app.AiTranscriptDiagnosticTest)
+java.io.IOException: Could not reach the AI provider. Check your connection and retry.
+	at com.lecturemind.app.ai.ProviderHttp$request$2$2.onFailure(AiProvider.kt:47)
+	at okhttp3.internal.connection.RealCall$AsyncCall.run(RealCall.kt:525)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1100)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:1571)
+
+FAILURES!!!
+Tests run: 1,  Failures: 1
+
+
+INSTRUMENTATION_CODE: -1

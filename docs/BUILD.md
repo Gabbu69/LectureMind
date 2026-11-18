@@ -12,7 +12,7 @@ A personal Android lecture recorder and AI study app. Record only with permissio
 6. Read/edit Notes, study the Reviewer, and take a Quiz. Answers appear after submission. Audio/source chips return to the referenced recording section.
 7. Share notes/reviewers as PDF or UTF-8 text using the share icon. Export important content before uninstalling.
 
-Recordings and generated materials work offline. AI generation requires internet and a usable API key. English, Filipino, and mixed Taglish are supported through the selected provider; recognition accuracy depends on recording quality and provider behavior. Check AI output against the original audio. OpenAI's plain transcript links to the start of each five-minute audio section rather than claiming precise sentence timestamps.
+Recordings and generated materials work offline. AI generation requires internet and a usable API key. The transcription requests explicitly cover Ilonggo/Hiligaynon, Bisaya/Cebuano, Tagalog/Filipino, English and code-switching, while preserving original speech. Settings offers these regional study-output choices; the earlier saved Filipino preference maps to Filipino / Tagalog. Provider recognition accuracy, local accents and translated study quality still require native-speaker acceptance. Check AI output against the original audio. OpenAI's plain transcript links to the start of each five-minute audio section rather than claiming precise sentence timestamps.
 
 ## Storage and privacy
 
@@ -43,14 +43,29 @@ The source is in `G:\LectureMind`, and the external toolchain/delivery root defa
 For this 4 GB laptop, use separate processes and one build at a time:
 
 ```powershell
-python tools/fast_build.py compileDebugUnitTestKotlin --write-locks
+python tools/phone_tests_build.py kspDebugKotlin
+python tools/phone_tests_build.py compileDebugKotlin
+python tools/phone_tests_build.py compileDebugUnitTestKotlin
 python tools/unit_tests.py
-python tools/fast_build.py lintDebug --write-locks
+python tools/lint_build.py
+python tools/phone_tests_build.py kspReleaseKotlin
+python tools/phone_tests_build.py compileReleaseKotlin
 python tools/assemble.py assembleRelease
 python tools/verify_release.py
 ```
 
 The smaller unit-test launcher assumes compilation is already cached. `tools/assemble.py` gives D8 packaging a 512 MiB heap with a lower metaspace cap; its compilation and lint inputs should already be cached. Without arguments it builds release, debug, and instrumentation APKs. Separating lint from Kotlin compilation also avoids an observed Kotlin analysis-plugin crash. No lint rules are disabled. Use `tools/build.py` instead of `tools/fast_build.py` to put all mutable build state under `G:\LectureMind-build`. The fast launcher requires its `.lecturemind-owned` marker. Build outputs are under the selected cache root's `outputs` directory.
+
+On this laptop an interactive PowerShell process can fail under memory pressure while its Gradle child continues. Check the active processes and daemon log before retrying. The following launcher keeps one build phase independent of the interactive shell and records its exit code:
+
+```powershell
+Start-Process -WindowStyle Hidden -FilePath C:\Python314\python.exe -ArgumentList @('G:\LectureMind\tools\run_detached.py', 'release', 'assemble.py', 'assembleRelease', '--offline')
+Get-Content G:\LectureMind\.build-fast\logs\job-release.json
+```
+
+Wait until the job reports `finished` before starting another phase. The launcher writes its log and status under `.build-fast/logs` on G:. Do not put API keys in build commands or build environment files.
+
+Windows Application Control blocked Room's build-time SQLite JDBC native library during a later optional timestamp experiment on this laptop. The delivered APK/source use the previously completed, tested regional-language implementation; the unbuilt experiment is excluded. Do not disable Application Control to reproduce a build. Use an approved toolchain or build environment if that policy blocks SQLite's compiler component. This is a host build restriction, not an Android runtime dependency.
 
 The release is personally signed, not a Google Play release. `tools/verify_release.py` checks the signature, manifest, ZIP integrity and common embedded-provider-key patterns, then copies the APK to `G:\LectureMind-build\releases`. `tools/package_source.py` creates a source-only archive there without caches, recordings, API keys or signing files.
 
@@ -59,6 +74,8 @@ Only the 24 additional Material icons used by the app are vendored, with their u
 ## Verification
 
 See `VERIFICATION.md` for actual results and pending acceptance checks. Local fixture/provider contract tests do not establish live AI quality. The one-hour microphone endurance test is explicitly opt-in and never uploads its captured audio.
+
+For an endurance run that does not keep UiAutomator attached during capture, start a normal app recording titled `Lecture mind endurance check 2026-11-16`, subject `Verification`, and save it after at least 60 minutes. Only then invoke `tools/device_tests.py manual-check`. This opt-in test checks segment order, WAV headers, duration, file sizes and playback across a boundary, then removes only that specifically named verification lecture and its audio. The `screenLocked` argument records host-observed screen-lock evidence; it does not establish that the screen stayed off every second. `tools/monitor_manual_recording.py` observes foreground-service status, memory and power state without sending recording controls or uploading audio. It requires the recording start metadata in `verification/manual-endurance-monitor.json` and explicit ADB path/device arguments.
 
 ## Official implementation references
 

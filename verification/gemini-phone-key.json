@@ -1,0 +1,9 @@
+{
+  "provider": "Gemini",
+  "model": "gemini-3.8-flash",
+  "encryptedPreferencesChanged": true,
+  "plaintextKeyPresentInPreferences": false,
+  "phoneMessages": [],
+  "verifiedAt": "2026-11-16T11:47:39.538Z",
+  "savedAfterReopen": true
+}

@@ -87,7 +87,7 @@ INSTRUMENTATION_STATUS: test=deletingLectureRemovesOnlyItsLocalExportCopies
 INSTRUMENTATION_STATUS_CODE: 0
 INSTRUMENTATION_RESULT: stream=
 
-Time: 37.293
+Time: 37.33
 
 OK (6 tests)
 

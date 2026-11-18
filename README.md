@@ -24,7 +24,7 @@ Android 8.0+ · APK approximately 11.1 MB · Early access
 
 No computer, GitHub account, or build tools are required. Choose the **.apk** file to install the app; GitHub's **Source code** ZIP files are for developers. This release is distributed directly through GitHub and is not on Google Play. An iPhone version is not available.
 
-**First release:** signed APK and automated local/device checks are available. Live Gemini/OpenAI generation quality and hour-long microphone endurance are still unverified. See the [verification report](VERIFICATION.md) before relying on it for an important lecture.
+**Regional-language update:** transcription guidance and study-output choices now cover Ilonggo/Hiligaynon, Bisaya/Cebuano, Filipino/Tagalog and English. Gemini key authentication has been checked on a TECNO Android 14 phone; complete live study generation and native-speaker recognition accuracy remain unverified after provider failures. Recorded checks include 14 unit tests and six device tests. See the [verification report](VERIFICATION.md) for evidence and remaining acceptance work. The latest download points to the regional-language release; the original release is retained separately.
 
 ## From a lecture to a study session
 
@@ -54,7 +54,7 @@ Actual Android screenshots. Notes and quiz screens show a controlled local test 
 
 Recording, playback and previously saved materials work offline. **AI generation requires internet, an API key and available provider quota; provider charges may apply.** A ChatGPT or Gemini app subscription does not supply an API key. Enter keys only inside the app, never in GitHub issues or messages.
 
-English, Filipino and Taglish are intended through the selected provider; live recognition accuracy has not yet been verified. Check generated content against your recording. OpenAI transcript references point to the start of each five-minute audio section rather than precise sentence timestamps.
+Lecture input can include **Ilonggo/Hiligaynon, Bisaya/Cebuano, Tagalog/Filipino and English**, including mixed-language speech. Both provider adapters explicitly request the original spoken words, without converting local speech into Tagalog or English. Choose English, Filipino / Tagalog, Ilonggo (Hiligaynon), or Bisaya (Cebuano) for notes, reviewer and quiz output in Settings. These language instructions and text preservation are implemented; native-speaker recognition accuracy remains unverified. Check local words and generated content against the recording. OpenAI transcript references point to the start of each five-minute audio section rather than precise sentence timestamps.
 
 ## Privacy and storage
 

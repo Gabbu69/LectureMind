@@ -1,4 +1,4 @@
-D:\LectureMind\app\src\main\java\com\lecturemind\app\data\SecureSettings.kt:51: Warning: Consider using apply() instead; commit writes its data to persistent storage immediately, whereas apply will handle it in the background [ApplySharedPref]
+G:\LectureMind\app\src\main\java\com\lecturemind\app\data\SecureSettings.kt:52: Warning: Consider using apply() instead; commit writes its data to persistent storage immediately, whereas apply will handle it in the background [ApplySharedPref]
     fun removeKey(provider: String) { prefs.edit().remove("key_$provider").commit() }
                                                                            ~~~~~~~~
 
@@ -7,48 +7,10 @@ D:\LectureMind\app\src\main\java\com\lecturemind\app\data\SecureSettings.kt:51: 
    commit blocks and writes its data to persistent storage immediately, apply
    will handle it in the background.
 
-D:\LectureMind\app\build.gradle:36: Warning: A newer version of androidx.compose:compose-bom than 2026.03.01 is available: 2026.09.00 [GradleDependency]
-    implementation platform('androidx.compose:compose-bom:2026.03.01')
-                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\LectureMind\app\build.gradle:37: Warning: A newer version of androidx.activity:activity-compose than 1.12.1 is available: 1.13.0 [GradleDependency]
-    implementation 'androidx.activity:activity-compose:1.12.1'
-                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\LectureMind\app\build.gradle:42: Warning: A newer version of androidx.lifecycle:lifecycle-runtime-compose than 2.9.4 is available: 2.11.0 [GradleDependency]
-    implementation 'androidx.lifecycle:lifecycle-runtime-compose:2.9.4'
-                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\LectureMind\app\build.gradle:43: Warning: A newer version of androidx.lifecycle:lifecycle-viewmodel-compose than 2.9.4 is available: 2.11.0 [GradleDependency]
-    implementation 'androidx.lifecycle:lifecycle-viewmodel-compose:2.9.4'
-                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\LectureMind\app\build.gradle:44: Warning: A newer version of androidx.room:room-runtime than 2.8.4 is available: 2.8.5 [GradleDependency]
-    implementation 'androidx.room:room-runtime:2.8.4'
-                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\LectureMind\app\build.gradle:45: Warning: A newer version of androidx.room:room-ktx than 2.8.4 is available: 2.8.5 [GradleDependency]
-    implementation 'androidx.room:room-ktx:2.8.4'
-                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\LectureMind\app\build.gradle:46: Warning: A newer version of androidx.room:room-compiler than 2.8.4 is available: 2.8.5 [GradleDependency]
-    ksp 'androidx.room:room-compiler:2.8.4'
-        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\LectureMind\app\build.gradle:47: Warning: A newer version of androidx.work:work-runtime-ktx than 2.10.5 is available: 2.12.0 [GradleDependency]
-    implementation 'androidx.work:work-runtime-ktx:2.10.5'
-                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\LectureMind\app\build.gradle:48: Warning: A newer version of androidx.media3:media3-exoplayer than 1.8.0 is available: 1.11.1 [GradleDependency]
-    implementation 'androidx.media3:media3-exoplayer:1.8.0'
-                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\LectureMind\app\build.gradle:55: Warning: A newer version of androidx.test.uiautomator:uiautomator than 2.3.0 is available: 2.4.1 [GradleDependency]
-    androidTestImplementation 'androidx.test.uiautomator:uiautomator:2.3.0'
-                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-   Explanation for issues of type "GradleDependency":
-   This detector looks for usages of libraries where the version you are using
-   is not the current stable release. Using older versions is fine, and there
-   are cases where you deliberately want to stick with an older version.
-   However, you may simply not be aware that a more recent version is
-   available, and that is what this lint check helps find.
-
-D:\LectureMind\app\build.gradle:49: Warning: A newer version of com.squareup.okhttp3:okhttp than 4.12.0 is available: 5.5.1 [NewerVersionAvailable]
+G:\LectureMind\app\build.gradle:49: Warning: A newer version of com.squareup.okhttp3:okhttp than 4.12.0 is available: 5.5.1 [NewerVersionAvailable]
     implementation 'com.squareup.okhttp3:okhttp:4.12.0'
                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\LectureMind\app\build.gradle:51: Warning: A newer version of org.json:json than 20260719 is available: 20260814 [NewerVersionAvailable]
+G:\LectureMind\app\build.gradle:51: Warning: A newer version of org.json:json than 20260719 is available: 20260814 [NewerVersionAvailable]
     testImplementation 'org.json:json:20260719'
                        ~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -60,10 +22,10 @@ D:\LectureMind\app\build.gradle:51: Warning: A newer version of org.json:json th
    MavenCentral dependency, and connects to the library every time, which
    makes it more flexible but also much slower.
 
-D:\LectureMind\app\src\main\java\com\lecturemind\app\recording\RecordingService.kt:84: Warning: Consider also using StorageManager#getAllocatableBytes and allocateBytes which will consider clearable cached data [UsableSpace]
+G:\LectureMind\app\src\main\java\com\lecturemind\app\recording\RecordingService.kt:84: Warning: Consider also using StorageManager#getAllocatableBytes and allocateBytes which will consider clearable cached data [UsableSpace]
             check(File(filesDir, "audio").apply { mkdirs() }.usableSpace > 64L * 1024 * 1024) { "Low storage. Free at least 64 MB before recording." }
                                                              ~~~~~~~~~~~
-D:\LectureMind\app\src\main\java\com\lecturemind\app\recording\RecordingService.kt:131: Warning: Consider also using StorageManager#getAllocatableBytes and allocateBytes which will consider clearable cached data [UsableSpace]
+G:\LectureMind\app\src\main\java\com\lecturemind\app\recording\RecordingService.kt:131: Warning: Consider also using StorageManager#getAllocatableBytes and allocateBytes which will consider clearable cached data [UsableSpace]
                     if (currentFile.usableSpace < 32L * 1024 * 1024) { endMessage = "Recording stopped because storage is low. Your saved audio is safe."; break }
                                     ~~~~~~~~~~~
 
@@ -84,22 +46,22 @@ D:\LectureMind\app\src\main\java\com\lecturemind\app\recording\RecordingService.
    you are already using the new API, consider moving the calls to the same
    file or suppressing the warning.
 
-D:\LectureMind\app\src\main\java\com\lecturemind\app\data\SecureSettings.kt:18: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+G:\LectureMind\app\src\main\java\com\lecturemind\app\data\SecureSettings.kt:19: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
         set(value) { require(value in listOf("Gemini", "OpenAI")); prefs.edit().putString("provider", value).apply() }
                                                                    ~~~~~~~~~~~~
-D:\LectureMind\app\src\main\java\com\lecturemind\app\data\SecureSettings.kt:21: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
-        set(value) { prefs.edit().putString("language", value).apply() }
-                     ~~~~~~~~~~~~
-D:\LectureMind\app\src\main\java\com\lecturemind\app\data\SecureSettings.kt:24: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+G:\LectureMind\app\src\main\java\com\lecturemind\app\data\SecureSettings.kt:22: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+        set(value) { val selected=LectureLanguages.canonicalOutput(value) ?: error("Choose a supported study language.");prefs.edit().putString("language", selected).apply() }
+                                                                                                                         ~~~~~~~~~~~~
+G:\LectureMind\app\src\main\java\com\lecturemind\app\data\SecureSettings.kt:25: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
         set(value) { prefs.edit().putString("appearance", value).apply() }
                      ~~~~~~~~~~~~
-D:\LectureMind\app\src\main\java\com\lecturemind\app\data\SecureSettings.kt:26: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+G:\LectureMind\app\src\main\java\com\lecturemind\app\data\SecureSettings.kt:27: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
     fun setModel(provider: String, model: String) { require(model.matches(Regex("[A-Za-z0-9._-]{1,100}"))); prefs.edit().putString("model_$provider", model).apply() }
                                                                                                             ~~~~~~~~~~~~
-D:\LectureMind\app\src\main\java\com\lecturemind\app\data\SecureSettings.kt:41: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+G:\LectureMind\app\src\main\java\com\lecturemind\app\data\SecureSettings.kt:42: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
         check(prefs.edit().putString("key_$provider", Base64.encodeToString(cipher.iv + encrypted, Base64.NO_WRAP)).commit())
               ~~~~~~~~~~~~
-D:\LectureMind\app\src\main\java\com\lecturemind\app\data\SecureSettings.kt:51: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+G:\LectureMind\app\src\main\java\com\lecturemind\app\data\SecureSettings.kt:52: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
     fun removeKey(provider: String) { prefs.edit().remove("key_$provider").commit() }
                                       ~~~~~~~~~~~~
 
@@ -159,4 +121,4 @@ D:\LectureMind\app\src\main\java\com\lecturemind\app\data\SecureSettings.kt:51: 
    </lint>
    ```
 
-0 errors, 21 warnings
+0 errors, 11 warnings

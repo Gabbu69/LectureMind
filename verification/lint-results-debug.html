@@ -177,9 +177,9 @@ document.getElementById(id).style.display = 'none';
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
   <header class="mdl-layout__header">
     <div class="mdl-layout__header-row">
-      <span class="mdl-layout-title">Lint Report: 21 warnings</span>
+      <span class="mdl-layout-title">Lint Report: 11 warnings</span>
       <div class="mdl-layout-spacer"></div>
-      <nav class="mdl-navigation mdl-layout--large-screen-only">Check performed at Mon Nov 16 15:09:18 PST 2026 by AGP (9.1.1)</nav>
+      <nav class="mdl-navigation mdl-layout--large-screen-only">Check performed at Wed Nov 18 11:40:29 PST 2026 by AGP (9.1.1)</nav>
     </div>
   </header>
   <div class="mdl-layout__drawer">
@@ -187,7 +187,6 @@ document.getElementById(id).style.display = 'none';
     <nav class="mdl-navigation">
       <a class="mdl-navigation__link" href="#overview"><i class="material-icons">dashboard</i>Overview</a>
       <a class="mdl-navigation__link" href="#ApplySharedPref"><i class="material-icons warning-icon">warning</i>Use <code>apply()</code> on <code>SharedPreferences</code> (1)</a>
-      <a class="mdl-navigation__link" href="#GradleDependency"><i class="material-icons warning-icon">warning</i>Obsolete Gradle Dependency (10)</a>
       <a class="mdl-navigation__link" href="#NewerVersionAvailable"><i class="material-icons warning-icon">warning</i>Newer Library Versions Available (2)</a>
       <a class="mdl-navigation__link" href="#UsableSpace"><i class="material-icons warning-icon">warning</i>Using getUsableSpace() (2)</a>
       <a class="mdl-navigation__link" href="#UseKtx"><i class="material-icons warning-icon">warning</i>Use KTX extension function (6)</a>
@@ -208,9 +207,6 @@ document.getElementById(id).style.display = 'none';
 <tr>
 <td class="countColumn">1</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
 <a href="#ApplySharedPref">ApplySharedPref</a>: Use <code>apply()</code> on <code>SharedPreferences</code></td></tr>
-<tr>
-<td class="countColumn">10</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
-<a href="#GradleDependency">GradleDependency</a>: Obsolete Gradle Dependency</td></tr>
 <tr>
 <td class="countColumn">2</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
 <a href="#NewerVersionAvailable">NewerVersionAvailable</a>: Newer Library Versions Available</td></tr>
@@ -245,12 +241,12 @@ Dismiss</button>            </div>
               <div class="mdl-card__supporting-text">
 <div class="issue">
 <div class="warningslist">
-<span class="location"><a href="../../../../app/src/main/java/com/lecturemind/app/data/SecureSettings.kt">../../../../app/src/main/java/com/lecturemind/app/data/SecureSettings.kt</a>:51</span>: <span class="message">Consider using <code>apply()</code> instead; <code>commit</code> writes its data to persistent storage immediately, whereas <code>apply</code> will handle it in the background</span><br /><pre class="errorlines">
-<span class="lineno"> 48 </span>            String(cipher.doFinal(bytes.copyOfRange(<span class="number">12</span>, bytes.size)), Charsets.UTF_8)
-<span class="lineno"> 49 </span>        } catch (_: Exception) { error(<span class="string">"Your saved key could not be unlocked. Please enter it again in Settings."</span>) }
-<span class="lineno"> 50 </span>    }
-<span class="caretline"><span class="lineno"> 51 </span>    <span class="keyword">fun</span> removeKey(provider: String) { prefs.edit().remove(<span class="string">"key_$provider"</span>).<span class="warning">commit()</span> }&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 52 </span>}
+<span class="location"><a href="../../../../app/src/main/java/com/lecturemind/app/data/SecureSettings.kt">../../../../app/src/main/java/com/lecturemind/app/data/SecureSettings.kt</a>:52</span>: <span class="message">Consider using <code>apply()</code> instead; <code>commit</code> writes its data to persistent storage immediately, whereas <code>apply</code> will handle it in the background</span><br /><pre class="errorlines">
+<span class="lineno"> 49 </span>            String(cipher.doFinal(bytes.copyOfRange(<span class="number">12</span>, bytes.size)), Charsets.UTF_8)
+<span class="lineno"> 50 </span>        } catch (_: Exception) { error(<span class="string">"Your saved key could not be unlocked. Please enter it again in Settings."</span>) }
+<span class="lineno"> 51 </span>    }
+<span class="caretline"><span class="lineno"> 52 </span>    <span class="keyword">fun</span> removeKey(provider: String) { prefs.edit().remove(<span class="string">"key_$provider"</span>).<span class="warning">commit()</span> }&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 53 </span>}
 </pre>
 
 </div>
@@ -280,136 +276,6 @@ To suppress this error, use the issue id "ApplySharedPref" as explained in the <
 Explain</button><button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="ApplySharedPrefCardLink" onclick="hideid('ApplySharedPrefCard');">
 Dismiss</button>            </div>
             </div>
-          </section><a name="GradleDependency"></a>
-<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="GradleDependencyCard" style="display: block;">
-            <div class="mdl-card mdl-cell mdl-cell--12-col">
-  <div class="mdl-card__title">
-    <h2 class="mdl-card__title-text">Obsolete Gradle Dependency</h2>
-  </div>
-              <div class="mdl-card__supporting-text">
-<div class="issue">
-<div class="warningslist">
-<span class="location"><a href="../../../../app/build.gradle">../../../../app/build.gradle</a>:36</span>: <span class="message">A newer version of androidx.compose:compose-bom than 2026.03.01 is available: 2026.09.00</span><br /><pre class="errorlines">
-<span class="lineno"> 33 </span>    lint { abortOnError <span class="keyword">true</span>; checkReleaseBuilds <span class="keyword">true</span> }
-<span class="lineno"> 34 </span>}
-<span class="lineno"> 35 </span>dependencies {
-<span class="caretline"><span class="lineno"> 36 </span>    implementation platform(<span class="warning"><span class="string">'androidx.compose:compose-bom:2026.03.01'</span></span>)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 37 </span>    implementation <span class="string">'androidx.activity:activity-compose:1.12.1'</span>
-<span class="lineno"> 38 </span>    implementation <span class="string">'androidx.compose.ui:ui'</span>
-<span class="lineno"> 39 </span>    implementation <span class="string">'androidx.compose.ui:ui-tooling-preview'</span></pre>
-
-<span class="location"><a href="../../../../app/build.gradle">../../../../app/build.gradle</a>:37</span>: <span class="message">A newer version of androidx.activity:activity-compose than 1.12.1 is available: 1.13.0</span><br /><pre class="errorlines">
-<span class="lineno"> 34 </span>}
-<span class="lineno"> 35 </span>dependencies {
-<span class="lineno"> 36 </span>    implementation platform(<span class="string">'androidx.compose:compose-bom:2026.03.01'</span>)
-<span class="caretline"><span class="lineno"> 37 </span>    implementation <span class="warning"><span class="string">'androidx.activity:activity-compose:1.12.1'</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 38 </span>    implementation <span class="string">'androidx.compose.ui:ui'</span>
-<span class="lineno"> 39 </span>    implementation <span class="string">'androidx.compose.ui:ui-tooling-preview'</span>
-<span class="lineno"> 40 </span>    implementation <span class="string">'androidx.compose.material3:material3'</span></pre>
-
-<span class="location"><a href="../../../../app/build.gradle">../../../../app/build.gradle</a>:42</span>: <span class="message">A newer version of androidx.lifecycle:lifecycle-runtime-compose than 2.9.4 is available: 2.11.0</span><br /><pre class="errorlines">
-<span class="lineno"> 39 </span>    implementation <span class="string">'androidx.compose.ui:ui-tooling-preview'</span>
-<span class="lineno"> 40 </span>    implementation <span class="string">'androidx.compose.material3:material3'</span>
-<span class="lineno"> 41 </span>    implementation <span class="string">'androidx.compose.material:material-icons-core:1.7.8'</span>
-<span class="caretline"><span class="lineno"> 42 </span>    implementation <span class="warning"><span class="string">'androidx.lifecycle:lifecycle-runtime-compose:2.9.4'</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 43 </span>    implementation <span class="string">'androidx.lifecycle:lifecycle-viewmodel-compose:2.9.4'</span>
-<span class="lineno"> 44 </span>    implementation <span class="string">'androidx.room:room-runtime:2.8.4'</span>
-<span class="lineno"> 45 </span>    implementation <span class="string">'androidx.room:room-ktx:2.8.4'</span></pre>
-
-<span class="location"><a href="../../../../app/build.gradle">../../../../app/build.gradle</a>:43</span>: <span class="message">A newer version of androidx.lifecycle:lifecycle-viewmodel-compose than 2.9.4 is available: 2.11.0</span><br /><pre class="errorlines">
-<span class="lineno"> 40 </span>    implementation <span class="string">'androidx.compose.material3:material3'</span>
-<span class="lineno"> 41 </span>    implementation <span class="string">'androidx.compose.material:material-icons-core:1.7.8'</span>
-<span class="lineno"> 42 </span>    implementation <span class="string">'androidx.lifecycle:lifecycle-runtime-compose:2.9.4'</span>
-<span class="caretline"><span class="lineno"> 43 </span>    implementation <span class="warning"><span class="string">'androidx.lifecycle:lifecycle-viewmodel-compose:2.9.4'</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 44 </span>    implementation <span class="string">'androidx.room:room-runtime:2.8.4'</span>
-<span class="lineno"> 45 </span>    implementation <span class="string">'androidx.room:room-ktx:2.8.4'</span>
-<span class="lineno"> 46 </span>    ksp <span class="string">'androidx.room:room-compiler:2.8.4'</span></pre>
-
-<span class="location"><a href="../../../../app/build.gradle">../../../../app/build.gradle</a>:44</span>: <span class="message">A newer version of androidx.room:room-runtime than 2.8.4 is available: 2.8.5</span><br /><pre class="errorlines">
-<span class="lineno"> 41 </span>    implementation <span class="string">'androidx.compose.material:material-icons-core:1.7.8'</span>
-<span class="lineno"> 42 </span>    implementation <span class="string">'androidx.lifecycle:lifecycle-runtime-compose:2.9.4'</span>
-<span class="lineno"> 43 </span>    implementation <span class="string">'androidx.lifecycle:lifecycle-viewmodel-compose:2.9.4'</span>
-<span class="caretline"><span class="lineno"> 44 </span>    implementation <span class="warning"><span class="string">'androidx.room:room-runtime:2.8.4'</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 45 </span>    implementation <span class="string">'androidx.room:room-ktx:2.8.4'</span>
-<span class="lineno"> 46 </span>    ksp <span class="string">'androidx.room:room-compiler:2.8.4'</span>
-<span class="lineno"> 47 </span>    implementation <span class="string">'androidx.work:work-runtime-ktx:2.10.5'</span></pre>
-
-<button class="mdl-button mdl-js-button mdl-button--primary" id="GradleDependencyDivLink" onclick="reveal('GradleDependencyDiv');" />+ 5 More Occurrences...</button>
-<div id="GradleDependencyDiv" style="display: none">
-<span class="location"><a href="../../../../app/build.gradle">../../../../app/build.gradle</a>:45</span>: <span class="message">A newer version of androidx.room:room-ktx than 2.8.4 is available: 2.8.5</span><br /><pre class="errorlines">
-<span class="lineno"> 42 </span>    implementation <span class="string">'androidx.lifecycle:lifecycle-runtime-compose:2.9.4'</span>
-<span class="lineno"> 43 </span>    implementation <span class="string">'androidx.lifecycle:lifecycle-viewmodel-compose:2.9.4'</span>
-<span class="lineno"> 44 </span>    implementation <span class="string">'androidx.room:room-runtime:2.8.4'</span>
-<span class="caretline"><span class="lineno"> 45 </span>    implementation <span class="warning"><span class="string">'androidx.room:room-ktx:2.8.4'</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 46 </span>    ksp <span class="string">'androidx.room:room-compiler:2.8.4'</span>
-<span class="lineno"> 47 </span>    implementation <span class="string">'androidx.work:work-runtime-ktx:2.10.5'</span>
-<span class="lineno"> 48 </span>    implementation <span class="string">'androidx.media3:media3-exoplayer:1.8.0'</span></pre>
-
-<span class="location"><a href="../../../../app/build.gradle">../../../../app/build.gradle</a>:46</span>: <span class="message">A newer version of androidx.room:room-compiler than 2.8.4 is available: 2.8.5</span><br /><pre class="errorlines">
-<span class="lineno"> 43 </span>    implementation <span class="string">'androidx.lifecycle:lifecycle-viewmodel-compose:2.9.4'</span>
-<span class="lineno"> 44 </span>    implementation <span class="string">'androidx.room:room-runtime:2.8.4'</span>
-<span class="lineno"> 45 </span>    implementation <span class="string">'androidx.room:room-ktx:2.8.4'</span>
-<span class="caretline"><span class="lineno"> 46 </span>    ksp <span class="warning"><span class="string">'androidx.room:room-compiler:2.8.4'</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 47 </span>    implementation <span class="string">'androidx.work:work-runtime-ktx:2.10.5'</span>
-<span class="lineno"> 48 </span>    implementation <span class="string">'androidx.media3:media3-exoplayer:1.8.0'</span>
-<span class="lineno"> 49 </span>    implementation <span class="string">'com.squareup.okhttp3:okhttp:4.12.0'</span></pre>
-
-<span class="location"><a href="../../../../app/build.gradle">../../../../app/build.gradle</a>:47</span>: <span class="message">A newer version of androidx.work:work-runtime-ktx than 2.10.5 is available: 2.12.0</span><br /><pre class="errorlines">
-<span class="lineno"> 44 </span>    implementation <span class="string">'androidx.room:room-runtime:2.8.4'</span>
-<span class="lineno"> 45 </span>    implementation <span class="string">'androidx.room:room-ktx:2.8.4'</span>
-<span class="lineno"> 46 </span>    ksp <span class="string">'androidx.room:room-compiler:2.8.4'</span>
-<span class="caretline"><span class="lineno"> 47 </span>    implementation <span class="warning"><span class="string">'androidx.work:work-runtime-ktx:2.10.5'</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 48 </span>    implementation <span class="string">'androidx.media3:media3-exoplayer:1.8.0'</span>
-<span class="lineno"> 49 </span>    implementation <span class="string">'com.squareup.okhttp3:okhttp:4.12.0'</span>
-<span class="lineno"> 50 </span>    testImplementation <span class="string">'junit:junit:4.13.2'</span></pre>
-
-<span class="location"><a href="../../../../app/build.gradle">../../../../app/build.gradle</a>:48</span>: <span class="message">A newer version of androidx.media3:media3-exoplayer than 1.8.0 is available: 1.11.1</span><br /><pre class="errorlines">
-<span class="lineno"> 45 </span>    implementation <span class="string">'androidx.room:room-ktx:2.8.4'</span>
-<span class="lineno"> 46 </span>    ksp <span class="string">'androidx.room:room-compiler:2.8.4'</span>
-<span class="lineno"> 47 </span>    implementation <span class="string">'androidx.work:work-runtime-ktx:2.10.5'</span>
-<span class="caretline"><span class="lineno"> 48 </span>    implementation <span class="warning"><span class="string">'androidx.media3:media3-exoplayer:1.8.0'</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 49 </span>    implementation <span class="string">'com.squareup.okhttp3:okhttp:4.12.0'</span>
-<span class="lineno"> 50 </span>    testImplementation <span class="string">'junit:junit:4.13.2'</span>
-<span class="lineno"> 51 </span>    testImplementation <span class="string">'org.json:json:20260719'</span></pre>
-
-<span class="location"><a href="../../../../app/build.gradle">../../../../app/build.gradle</a>:55</span>: <span class="message">A newer version of androidx.test.uiautomator:uiautomator than 2.3.0 is available: 2.4.1</span><br /><pre class="errorlines">
-<span class="lineno"> 52 </span>    androidTestImplementation <span class="string">'androidx.test.ext:junit:1.3.0'</span>
-<span class="lineno"> 53 </span>    androidTestImplementation <span class="string">'androidx.test:runner:1.7.0'</span>
-<span class="lineno"> 54 </span>    androidTestImplementation <span class="string">'androidx.test:rules:1.7.0'</span>
-<span class="caretline"><span class="lineno"> 55 </span>    androidTestImplementation <span class="warning"><span class="string">'androidx.test.uiautomator:uiautomator:2.3.0'</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 56 </span>}
-<span class="lineno"> 57 </span>ksp { arg(<span class="string">'room.schemaLocation'</span>, <span class="string">"$projectDir/schemas"</span>) }
-<span class="lineno"> 58 </span>dependencyLocking { lockAllConfigurations() }
-</pre>
-
-</div>
-</div>
-<div class="metadata"><div class="explanation" id="explanationGradleDependency" style="display: none;">
-This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find.<br/>Note: This issue has an associated quickfix operation in Android Studio and IntelliJ IDEA.<br>
-To suppress this error, use the issue id "GradleDependency" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
-<br/></div>
-</div>
-</div>
-<div class="chips">
-<span class="mdl-chip">
-    <span class="mdl-chip__text">GradleDependency</span>
-</span>
-<span class="mdl-chip">
-    <span class="mdl-chip__text">Correctness</span>
-</span>
-<span class="mdl-chip">
-    <span class="mdl-chip__text">Warning</span>
-</span>
-<span class="mdl-chip">
-    <span class="mdl-chip__text">Priority 4/10</span>
-</span>
-</div>
-              </div>
-              <div class="mdl-card__actions mdl-card--border">
-<button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="explanationGradleDependencyLink" onclick="reveal('explanationGradleDependency');">
-Explain</button><button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="GradleDependencyCardLink" onclick="hideid('GradleDependencyCard');">
-Dismiss</button>            </div>
-            </div>
           </section><a name="NewerVersionAvailable"></a>
 <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="NewerVersionAvailableCard" style="display: block;">
             <div class="mdl-card mdl-cell mdl-cell--12-col">
@@ -423,19 +289,21 @@ Dismiss</button>            </div>
 <span class="lineno"> 46 </span>    ksp <span class="string">'androidx.room:room-compiler:2.8.4'</span>
 <span class="lineno"> 47 </span>    implementation <span class="string">'androidx.work:work-runtime-ktx:2.10.5'</span>
 <span class="lineno"> 48 </span>    implementation <span class="string">'androidx.media3:media3-exoplayer:1.8.0'</span>
-<span class="caretline"><span class="lineno"> 49 </span>    implementation <span class="warning"><span class="string">'com.squareup.okhttp3:okhttp:4.12.0'</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="caretline"><span class="lineno"> 49 </span>    implementation <span class="warning"><span class="string">'com.squareup.okhttp3:okhttp:4.12.0'</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
 <span class="lineno"> 50 </span>    testImplementation <span class="string">'junit:junit:4.13.2'</span>
 <span class="lineno"> 51 </span>    testImplementation <span class="string">'org.json:json:20260719'</span>
-<span class="lineno"> 52 </span>    androidTestImplementation <span class="string">'androidx.test.ext:junit:1.3.0'</span></pre>
+<span class="lineno"> 52 </span>    androidTestImplementation <span class="string">'androidx.test.ext:junit:1.3.0'</span>
+</pre>
 
 <span class="location"><a href="../../../../app/build.gradle">../../../../app/build.gradle</a>:51</span>: <span class="message">A newer version of org.json:json than 20260719 is available: 20260814</span><br /><pre class="errorlines">
 <span class="lineno"> 48 </span>    implementation <span class="string">'androidx.media3:media3-exoplayer:1.8.0'</span>
 <span class="lineno"> 49 </span>    implementation <span class="string">'com.squareup.okhttp3:okhttp:4.12.0'</span>
 <span class="lineno"> 50 </span>    testImplementation <span class="string">'junit:junit:4.13.2'</span>
-<span class="caretline"><span class="lineno"> 51 </span>    testImplementation <span class="warning"><span class="string">'org.json:json:20260719'</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="caretline"><span class="lineno"> 51 </span>    testImplementation <span class="warning"><span class="string">'org.json:json:20260719'</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
 <span class="lineno"> 52 </span>    androidTestImplementation <span class="string">'androidx.test.ext:junit:1.3.0'</span>
 <span class="lineno"> 53 </span>    androidTestImplementation <span class="string">'androidx.test:runner:1.7.0'</span>
-<span class="lineno"> 54 </span>    androidTestImplementation <span class="string">'androidx.test:rules:1.7.0'</span></pre>
+<span class="lineno"> 54 </span>    androidTestImplementation <span class="string">'androidx.test:rules:1.7.0'</span>
+</pre>
 
 </div>
 <div class="metadata"><div class="explanation" id="explanationNewerVersionAvailable" style="display: none;">
@@ -536,62 +404,62 @@ Dismiss</button>            </div>
               <div class="mdl-card__supporting-text">
 <div class="issue">
 <div class="warningslist">
-<span class="location"><a href="../../../../app/src/main/java/com/lecturemind/app/data/SecureSettings.kt">../../../../app/src/main/java/com/lecturemind/app/data/SecureSettings.kt</a>:18</span>: <span class="message">Use the KTX extension function <code>SharedPreferences.edit</code> instead?</span><br /><pre class="errorlines">
-<span class="lineno"> 15 </span>  private <span class="keyword">val</span> prefs = context.getSharedPreferences(<span class="string">"settings"</span>, Context.MODE_PRIVATE)
-<span class="lineno"> 16 </span>  <span class="keyword">var</span> provider: String
-<span class="lineno"> 17 </span>      get() = prefs.getString(<span class="string">"provider"</span>, <span class="string">"Gemini"</span>) ?: <span class="string">"Gemini"</span>
-<span class="caretline"><span class="lineno"> 18 </span>      set(value) { require(value <span class="keyword">in</span> listOf(<span class="string">"Gemini"</span>, <span class="string">"OpenAI"</span>)); <span class="warning">prefs.edit()</span>.putString(<span class="string">"provider"</span>, value).apply() }</span>
-<span class="lineno"> 19 </span>  <span class="keyword">var</span> language: String
-<span class="lineno"> 20 </span>      get() = prefs.getString(<span class="string">"language"</span>, <span class="string">"English"</span>) ?: <span class="string">"English"</span>
-<span class="lineno"> 21 </span>      set(value) { prefs.edit().putString(<span class="string">"language"</span>, value).apply() }
+<span class="location"><a href="../../../../app/src/main/java/com/lecturemind/app/data/SecureSettings.kt">../../../../app/src/main/java/com/lecturemind/app/data/SecureSettings.kt</a>:19</span>: <span class="message">Use the KTX extension function <code>SharedPreferences.edit</code> instead?</span><br /><pre class="errorlines">
+<span class="lineno"> 16 </span>  private <span class="keyword">val</span> prefs = context.getSharedPreferences(<span class="string">"settings"</span>, Context.MODE_PRIVATE)
+<span class="lineno"> 17 </span>  <span class="keyword">var</span> provider: String
+<span class="lineno"> 18 </span>      get() = prefs.getString(<span class="string">"provider"</span>, <span class="string">"Gemini"</span>) ?: <span class="string">"Gemini"</span>
+<span class="caretline"><span class="lineno"> 19 </span>      set(value) { require(value <span class="keyword">in</span> listOf(<span class="string">"Gemini"</span>, <span class="string">"OpenAI"</span>)); <span class="warning">prefs.edit()</span>.putString(<span class="string">"provider"</span>, value).apply() }</span>
+<span class="lineno"> 20 </span>  <span class="keyword">var</span> language: String
+<span class="lineno"> 21 </span>      get() = LectureLanguages.canonicalOutput(prefs.getString(<span class="string">"language"</span>, <span class="string">"English"</span>) ?: <span class="string">"English"</span>) ?: <span class="string">"English"</span>
+<span class="lineno"> 22 </span>      set(value) { <span class="keyword">val</span> selected=LectureLanguages.canonicalOutput(value) ?: error(<span class="string">"Choose a supported study language."</span>);prefs.edit().putString(<span class="string">"language"</span>, selected).apply() }
 </pre>
 
-<span class="location"><a href="../../../../app/src/main/java/com/lecturemind/app/data/SecureSettings.kt">../../../../app/src/main/java/com/lecturemind/app/data/SecureSettings.kt</a>:21</span>: <span class="message">Use the KTX extension function <code>SharedPreferences.edit</code> instead?</span><br /><pre class="errorlines">
-<span class="lineno"> 18 </span>      set(value) { require(value <span class="keyword">in</span> listOf(<span class="string">"Gemini"</span>, <span class="string">"OpenAI"</span>)); prefs.edit().putString(<span class="string">"provider"</span>, value).apply() }
-<span class="lineno"> 19 </span>  <span class="keyword">var</span> language: String
-<span class="lineno"> 20 </span>      get() = prefs.getString(<span class="string">"language"</span>, <span class="string">"English"</span>) ?: <span class="string">"English"</span>
-<span class="caretline"><span class="lineno"> 21 </span>      set(value) { <span class="warning">prefs.edit()</span>.putString(<span class="string">"language"</span>, value).apply() }&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 22 </span>  <span class="keyword">var</span> appearance: String
-<span class="lineno"> 23 </span>      get() = prefs.getString(<span class="string">"appearance"</span>, <span class="string">"System"</span>) ?: <span class="string">"System"</span>
-<span class="lineno"> 24 </span>      set(value) { prefs.edit().putString(<span class="string">"appearance"</span>, value).apply() }
+<span class="location"><a href="../../../../app/src/main/java/com/lecturemind/app/data/SecureSettings.kt">../../../../app/src/main/java/com/lecturemind/app/data/SecureSettings.kt</a>:22</span>: <span class="message">Use the KTX extension function <code>SharedPreferences.edit</code> instead?</span><br /><pre class="errorlines">
+<span class="lineno"> 19 </span>      set(value) { require(value <span class="keyword">in</span> listOf(<span class="string">"Gemini"</span>, <span class="string">"OpenAI"</span>)); prefs.edit().putString(<span class="string">"provider"</span>, value).apply() }
+<span class="lineno"> 20 </span>  <span class="keyword">var</span> language: String
+<span class="lineno"> 21 </span>      get() = LectureLanguages.canonicalOutput(prefs.getString(<span class="string">"language"</span>, <span class="string">"English"</span>) ?: <span class="string">"English"</span>) ?: <span class="string">"English"</span>
+<span class="caretline"><span class="lineno"> 22 </span>      set(value) { <span class="keyword">val</span> selected=LectureLanguages.canonicalOutput(value) ?: error(<span class="string">"Choose a supported study language."</span>);<span class="warning">prefs.edit()</span>.putString(<span class="string">"language"</span>, selected).apply() }</span>
+<span class="lineno"> 23 </span>  <span class="keyword">var</span> appearance: String
+<span class="lineno"> 24 </span>      get() = prefs.getString(<span class="string">"appearance"</span>, <span class="string">"System"</span>) ?: <span class="string">"System"</span>
+<span class="lineno"> 25 </span>      set(value) { prefs.edit().putString(<span class="string">"appearance"</span>, value).apply() }
 </pre>
 
-<span class="location"><a href="../../../../app/src/main/java/com/lecturemind/app/data/SecureSettings.kt">../../../../app/src/main/java/com/lecturemind/app/data/SecureSettings.kt</a>:24</span>: <span class="message">Use the KTX extension function <code>SharedPreferences.edit</code> instead?</span><br /><pre class="errorlines">
-<span class="lineno"> 21 </span>      set(value) { prefs.edit().putString(<span class="string">"language"</span>, value).apply() }
-<span class="lineno"> 22 </span>  <span class="keyword">var</span> appearance: String
-<span class="lineno"> 23 </span>      get() = prefs.getString(<span class="string">"appearance"</span>, <span class="string">"System"</span>) ?: <span class="string">"System"</span>
-<span class="caretline"><span class="lineno"> 24 </span>      set(value) { <span class="warning">prefs.edit()</span>.putString(<span class="string">"appearance"</span>, value).apply() }&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 25 </span>  <span class="keyword">fun</span> model(provider: String) = prefs.getString(<span class="string">"model_$provider"</span>, <span class="keyword">if</span> (provider == <span class="string">"Gemini"</span>) <span class="string">"gemini-3.8-flash"</span> <span class="keyword">else</span> <span class="string">"gpt-5.4-mini"</span>)!!
-<span class="lineno"> 26 </span>  <span class="keyword">fun</span> setModel(provider: String, model: String) { require(model.matches(Regex(<span class="string">"[A-Za-z0-9._-]{1,100}"</span>))); prefs.edit().putString(<span class="string">"model_$provider"</span>, model).apply() }
-<span class="lineno"> 27 </span>  <span class="keyword">fun</span> hasKey(provider: String) = prefs.contains(<span class="string">"key_$provider"</span>)
+<span class="location"><a href="../../../../app/src/main/java/com/lecturemind/app/data/SecureSettings.kt">../../../../app/src/main/java/com/lecturemind/app/data/SecureSettings.kt</a>:25</span>: <span class="message">Use the KTX extension function <code>SharedPreferences.edit</code> instead?</span><br /><pre class="errorlines">
+<span class="lineno"> 22 </span>      set(value) { <span class="keyword">val</span> selected=LectureLanguages.canonicalOutput(value) ?: error(<span class="string">"Choose a supported study language."</span>);prefs.edit().putString(<span class="string">"language"</span>, selected).apply() }
+<span class="lineno"> 23 </span>  <span class="keyword">var</span> appearance: String
+<span class="lineno"> 24 </span>      get() = prefs.getString(<span class="string">"appearance"</span>, <span class="string">"System"</span>) ?: <span class="string">"System"</span>
+<span class="caretline"><span class="lineno"> 25 </span>      set(value) { <span class="warning">prefs.edit()</span>.putString(<span class="string">"appearance"</span>, value).apply() }&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 26 </span>  <span class="keyword">fun</span> model(provider: String) = prefs.getString(<span class="string">"model_$provider"</span>, <span class="keyword">if</span> (provider == <span class="string">"Gemini"</span>) <span class="string">"gemini-3.8-flash"</span> <span class="keyword">else</span> <span class="string">"gpt-5.4-mini"</span>)!!
+<span class="lineno"> 27 </span>  <span class="keyword">fun</span> setModel(provider: String, model: String) { require(model.matches(Regex(<span class="string">"[A-Za-z0-9._-]{1,100}"</span>))); prefs.edit().putString(<span class="string">"model_$provider"</span>, model).apply() }
+<span class="lineno"> 28 </span>  <span class="keyword">fun</span> hasKey(provider: String) = prefs.contains(<span class="string">"key_$provider"</span>)
 </pre>
 
-<span class="location"><a href="../../../../app/src/main/java/com/lecturemind/app/data/SecureSettings.kt">../../../../app/src/main/java/com/lecturemind/app/data/SecureSettings.kt</a>:26</span>: <span class="message">Use the KTX extension function <code>SharedPreferences.edit</code> instead?</span><br /><pre class="errorlines">
-<span class="lineno"> 23 </span>      get() = prefs.getString(<span class="string">"appearance"</span>, <span class="string">"System"</span>) ?: <span class="string">"System"</span>
-<span class="lineno"> 24 </span>      set(value) { prefs.edit().putString(<span class="string">"appearance"</span>, value).apply() }
-<span class="lineno"> 25 </span>  <span class="keyword">fun</span> model(provider: String) = prefs.getString(<span class="string">"model_$provider"</span>, <span class="keyword">if</span> (provider == <span class="string">"Gemini"</span>) <span class="string">"gemini-3.8-flash"</span> <span class="keyword">else</span> <span class="string">"gpt-5.4-mini"</span>)!!
-<span class="caretline"><span class="lineno"> 26 </span>  <span class="keyword">fun</span> setModel(provider: String, model: String) { require(model.matches(Regex(<span class="string">"[A-Za-z0-9._-]{1,100}"</span>))); <span class="warning">prefs.edit()</span>.putString(<span class="string">"model_$provider"</span>, model).apply() }</span>
-<span class="lineno"> 27 </span>  <span class="keyword">fun</span> hasKey(provider: String) = prefs.contains(<span class="string">"key_$provider"</span>)
-<span class="lineno"> 28 </span>  private <span class="keyword">fun</span> encryptionKey(): SecretKey {
-<span class="lineno"> 29 </span>      <span class="keyword">val</span> store = KeyStore.getInstance(<span class="string">"AndroidKeyStore"</span>).apply { load(<span class="keyword">null</span>) }
+<span class="location"><a href="../../../../app/src/main/java/com/lecturemind/app/data/SecureSettings.kt">../../../../app/src/main/java/com/lecturemind/app/data/SecureSettings.kt</a>:27</span>: <span class="message">Use the KTX extension function <code>SharedPreferences.edit</code> instead?</span><br /><pre class="errorlines">
+<span class="lineno"> 24 </span>      get() = prefs.getString(<span class="string">"appearance"</span>, <span class="string">"System"</span>) ?: <span class="string">"System"</span>
+<span class="lineno"> 25 </span>      set(value) { prefs.edit().putString(<span class="string">"appearance"</span>, value).apply() }
+<span class="lineno"> 26 </span>  <span class="keyword">fun</span> model(provider: String) = prefs.getString(<span class="string">"model_$provider"</span>, <span class="keyword">if</span> (provider == <span class="string">"Gemini"</span>) <span class="string">"gemini-3.8-flash"</span> <span class="keyword">else</span> <span class="string">"gpt-5.4-mini"</span>)!!
+<span class="caretline"><span class="lineno"> 27 </span>  <span class="keyword">fun</span> setModel(provider: String, model: String) { require(model.matches(Regex(<span class="string">"[A-Za-z0-9._-]{1,100}"</span>))); <span class="warning">prefs.edit()</span>.putString(<span class="string">"model_$provider"</span>, model).apply() }</span>
+<span class="lineno"> 28 </span>  <span class="keyword">fun</span> hasKey(provider: String) = prefs.contains(<span class="string">"key_$provider"</span>)
+<span class="lineno"> 29 </span>  private <span class="keyword">fun</span> encryptionKey(): SecretKey {
+<span class="lineno"> 30 </span>      <span class="keyword">val</span> store = KeyStore.getInstance(<span class="string">"AndroidKeyStore"</span>).apply { load(<span class="keyword">null</span>) }
 </pre>
 
-<span class="location"><a href="../../../../app/src/main/java/com/lecturemind/app/data/SecureSettings.kt">../../../../app/src/main/java/com/lecturemind/app/data/SecureSettings.kt</a>:41</span>: <span class="message">Use the KTX extension function <code>SharedPreferences.edit</code> instead?</span><br /><pre class="errorlines">
-<span class="lineno"> 38 </span>      require(value.length <span class="keyword">in</span> <span class="number">16..512</span> &amp;&amp; value.none { it.isWhitespace() }) { <span class="string">"Enter a valid API key without spaces."</span> }
-<span class="lineno"> 39 </span>      <span class="keyword">val</span> cipher = Cipher.getInstance(<span class="string">"AES/GCM/NoPadding"</span>).apply { init(Cipher.ENCRYPT_MODE, encryptionKey()) }
-<span class="lineno"> 40 </span>      <span class="keyword">val</span> encrypted = cipher.doFinal(value.toByteArray(Charsets.UTF_8))
-<span class="caretline"><span class="lineno"> 41 </span>      check(<span class="warning">prefs.edit()</span>.putString(<span class="string">"key_$provider"</span>, Base64.encodeToString(cipher.iv + encrypted, Base64.NO_WRAP)).commit())</span>
-<span class="lineno"> 42 </span>  }
-<span class="lineno"> 43 </span>  <span class="keyword">fun</span> key(provider: String): String {
-<span class="lineno"> 44 </span>      <span class="keyword">val</span> value = prefs.getString(<span class="string">"key_$provider"</span>, <span class="keyword">null</span>) ?: error(<span class="string">"Add your $provider API key in Settings first."</span>)
+<span class="location"><a href="../../../../app/src/main/java/com/lecturemind/app/data/SecureSettings.kt">../../../../app/src/main/java/com/lecturemind/app/data/SecureSettings.kt</a>:42</span>: <span class="message">Use the KTX extension function <code>SharedPreferences.edit</code> instead?</span><br /><pre class="errorlines">
+<span class="lineno"> 39 </span>      require(value.length <span class="keyword">in</span> <span class="number">16..512</span> &amp;&amp; value.none { it.isWhitespace() }) { <span class="string">"Enter a valid API key without spaces."</span> }
+<span class="lineno"> 40 </span>      <span class="keyword">val</span> cipher = Cipher.getInstance(<span class="string">"AES/GCM/NoPadding"</span>).apply { init(Cipher.ENCRYPT_MODE, encryptionKey()) }
+<span class="lineno"> 41 </span>      <span class="keyword">val</span> encrypted = cipher.doFinal(value.toByteArray(Charsets.UTF_8))
+<span class="caretline"><span class="lineno"> 42 </span>      check(<span class="warning">prefs.edit()</span>.putString(<span class="string">"key_$provider"</span>, Base64.encodeToString(cipher.iv + encrypted, Base64.NO_WRAP)).commit())</span>
+<span class="lineno"> 43 </span>  }
+<span class="lineno"> 44 </span>  <span class="keyword">fun</span> key(provider: String): String {
+<span class="lineno"> 45 </span>      <span class="keyword">val</span> value = prefs.getString(<span class="string">"key_$provider"</span>, <span class="keyword">null</span>) ?: error(<span class="string">"Add your $provider API key in Settings first."</span>)
 </pre>
 
-<span class="location"><a href="../../../../app/src/main/java/com/lecturemind/app/data/SecureSettings.kt">../../../../app/src/main/java/com/lecturemind/app/data/SecureSettings.kt</a>:51</span>: <span class="message">Use the KTX extension function <code>SharedPreferences.edit</code> instead?</span><br /><pre class="errorlines">
-<span class="lineno"> 48 </span>            String(cipher.doFinal(bytes.copyOfRange(<span class="number">12</span>, bytes.size)), Charsets.UTF_8)
-<span class="lineno"> 49 </span>        } catch (_: Exception) { error(<span class="string">"Your saved key could not be unlocked. Please enter it again in Settings."</span>) }
-<span class="lineno"> 50 </span>    }
-<span class="caretline"><span class="lineno"> 51 </span>    <span class="keyword">fun</span> removeKey(provider: String) { <span class="warning">prefs.edit()</span>.remove(<span class="string">"key_$provider"</span>).commit() }&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 52 </span>}
+<span class="location"><a href="../../../../app/src/main/java/com/lecturemind/app/data/SecureSettings.kt">../../../../app/src/main/java/com/lecturemind/app/data/SecureSettings.kt</a>:52</span>: <span class="message">Use the KTX extension function <code>SharedPreferences.edit</code> instead?</span><br /><pre class="errorlines">
+<span class="lineno"> 49 </span>            String(cipher.doFinal(bytes.copyOfRange(<span class="number">12</span>, bytes.size)), Charsets.UTF_8)
+<span class="lineno"> 50 </span>        } catch (_: Exception) { error(<span class="string">"Your saved key could not be unlocked. Please enter it again in Settings."</span>) }
+<span class="lineno"> 51 </span>    }
+<span class="caretline"><span class="lineno"> 52 </span>    <span class="keyword">fun</span> removeKey(provider: String) { <span class="warning">prefs.edit()</span>.remove(<span class="string">"key_$provider"</span>).commit() }&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 53 </span>}
 </pre>
 
 </div>

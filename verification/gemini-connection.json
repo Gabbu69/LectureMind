@@ -1,0 +1,12 @@
+{
+  "provider": "Gemini",
+  "model": "gemini-3.8-flash",
+  "modelAccessHttp": 200,
+  "generationHttp": 503,
+  "structuredTestSucceeded": false,
+  "errorCode": null,
+  "message": "gemini-3.8-flash is currently experiencing high demand, spikes in demand are usually temporary. Please try again later.",
+  "testPrompt": "Connection test only. Return the JSON object with ok equal to true.",
+  "lectureUploaded": false,
+  "verifiedAt": "2026-11-16T08:35:36.262Z"
+}

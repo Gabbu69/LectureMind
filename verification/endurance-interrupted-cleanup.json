@@ -1,0 +1,49 @@
+{
+  "recordings": [
+    {
+      "status": "saved",
+      "message": "Android silenced the microphone, possibly for a call or another app. Recording stopped; saved audio is retained.",
+      "durationMs": 1589600,
+      "parts": [
+        {
+          "startMs": 0,
+          "durationMs": 300000,
+          "finalized": true,
+          "bytes": 9600044
+        },
+        {
+          "startMs": 300000,
+          "durationMs": 300000,
+          "finalized": true,
+          "bytes": 9600044
+        },
+        {
+          "startMs": 600000,
+          "durationMs": 300000,
+          "finalized": true,
+          "bytes": 9600044
+        },
+        {
+          "startMs": 900000,
+          "durationMs": 300000,
+          "finalized": true,
+          "bytes": 9600044
+        },
+        {
+          "startMs": 1200000,
+          "durationMs": 300000,
+          "finalized": true,
+          "bytes": 9600044
+        },
+        {
+          "startMs": 1500000,
+          "durationMs": 89600,
+          "finalized": true,
+          "bytes": 2867244
+        }
+      ]
+    }
+  ],
+  "audioDeleted": true,
+  "audioUploaded": false
+}
